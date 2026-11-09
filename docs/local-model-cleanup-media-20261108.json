@@ -1,0 +1,162 @@
+{
+  "healthChecks": 85,
+  "healthFailures": 0,
+  "maxHealthMs": 48.330400000000004,
+  "instances": [
+    "761f3c83-4e56-4ab5-8253-a7c19bb5743b"
+  ],
+  "before": {
+    "at": "2026-11-07T21:25:30.441Z",
+    "sources": [
+      {
+        "id": "a3051001-7575-480a-9caa-bfbf71910c85",
+        "streamId": "gl_b579bd6b6b25403c97090aa33951eec6",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "b8b12c91-cd94-486d-984f-ddee3f3ade0e",
+        "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+      }
+    ],
+    "recordings": [
+      {
+        "id": "2ba8c8bb-a9eb-4dba-b95c-0543bfacd482",
+        "status": "recording",
+        "error": null,
+        "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+      }
+    ],
+    "files": {
+      "n": 327,
+      "latestRow": 327
+    },
+    "qwen": [
+      {
+        "id": "5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854",
+        "status": "queued",
+        "error": "其他AI任务优先，等待资源",
+        "result": null,
+        "usage": null,
+        "capturedAt": "2026-11-07T21:24:30.392Z",
+        "startedAt": null
+      },
+      {
+        "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+        "status": "queued",
+        "error": "其他AI任务优先，等待资源",
+        "result": null,
+        "usage": null,
+        "capturedAt": "2026-11-07T21:21:56.306Z",
+        "startedAt": null
+      },
+      {
+        "id": "8f79b981-2b16-4509-af08-995d784307eb",
+        "status": "succeeded",
+        "error": null,
+        "result": "{\"summary\":\"一名男子仰头看向上方，身穿黑色上衣，背景为灰色垂直条纹墙面，左上角有红色小标志。\",\"tags\":[\"人\",\"墙面\",\"黑色上衣\",\"仰视\",\"红色标志\",\"墙面条纹\"],\"objects\":[],\"observations\":[]}",
+        "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.63671875,\"privateMiB\":1546.3984375,\"cpuSeconds\":28.984375,\"elapsedMs\":30168}",
+        "capturedAt": "2026-11-07T21:19:46.378Z",
+        "startedAt": "2026-11-07T21:20:34.028Z"
+      },
+      {
+        "id": "495c8938-26da-418d-b2d8-859e0fbc2a54",
+        "status": "succeeded",
+        "error": null,
+        "result": "{\"summary\":\"画面中有一人站在灰色的大型物体旁，该物体呈弧形，表面有红色标志，人物穿着深色衣物，姿态静止。\",\"tags\":[\"人\",\"灰色物体\",\"深色衣物\",\"3至6个搜索关键词\"],\"objects\":[],\"observations\":[]}",
+        "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.171875,\"privateMiB\":1545.765625,\"cpuSeconds\":28.9375,\"elapsedMs\":31229}",
+        "capturedAt": "2026-11-07T21:15:42.863Z",
+        "startedAt": "2026-11-07T21:19:33.817Z"
+      }
+    ]
+  },
+  "after": {
+    "at": "2026-11-07T21:29:43.677Z",
+    "sources": [
+      {
+        "id": "a3051001-7575-480a-9caa-bfbf71910c85",
+        "streamId": "gl_b579bd6b6b25403c97090aa33951eec6",
+        "state": "ready",
+        "kind": "recording"
+      },
+      {
+        "id": "68af0fa1-4089-4b03-93b3-a9388fc28e8a",
+        "streamId": "gl_6be99873f8784ca092d64ffe16a5b0d7",
+        "state": "ready",
+        "kind": "live"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "b8b12c91-cd94-486d-984f-ddee3f3ade0e",
+        "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+      },
+      {
+        "id": "07fb5a2f-38f4-4d11-98e0-866bb2416742",
+        "sessionId": "68af0fa1-4089-4b03-93b3-a9388fc28e8a"
+      }
+    ],
+    "recordings": [
+      {
+        "id": "2ba8c8bb-a9eb-4dba-b95c-0543bfacd482",
+        "status": "recording",
+        "error": null,
+        "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+      }
+    ],
+    "files": {
+      "n": 329,
+      "latestRow": 329
+    },
+    "qwen": [
+      {
+        "id": "6d75533f-7de6-4ddc-882d-2de16ece08ef",
+        "status": "queued",
+        "error": "其他AI任务优先，等待资源",
+        "result": null,
+        "usage": null,
+        "capturedAt": "2026-11-07T21:26:51.642Z",
+        "startedAt": null
+      },
+      {
+        "id": "5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854",
+        "status": "queued",
+        "error": "其他AI任务优先，等待资源",
+        "result": null,
+        "usage": null,
+        "capturedAt": "2026-11-07T21:24:30.392Z",
+        "startedAt": null
+      },
+      {
+        "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+        "status": "queued",
+        "error": "其他AI任务优先，等待资源",
+        "result": null,
+        "usage": null,
+        "capturedAt": "2026-11-07T21:21:56.306Z",
+        "startedAt": null
+      },
+      {
+        "id": "8f79b981-2b16-4509-af08-995d784307eb",
+        "status": "succeeded",
+        "error": null,
+        "result": "{\"summary\":\"一名男子仰头看向上方，身穿黑色上衣，背景为灰色垂直条纹墙面，左上角有红色小标志。\",\"tags\":[\"人\",\"墙面\",\"黑色上衣\",\"仰视\",\"红色标志\",\"墙面条纹\"],\"objects\":[],\"observations\":[]}",
+        "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.63671875,\"privateMiB\":1546.3984375,\"cpuSeconds\":28.984375,\"elapsedMs\":30168}",
+        "capturedAt": "2026-11-07T21:19:46.378Z",
+        "startedAt": "2026-11-07T21:20:34.028Z"
+      }
+    ]
+  },
+  "baselineMediaPreserved": true,
+  "newReadySources": [
+    {
+      "id": "68af0fa1-4089-4b03-93b3-a9388fc28e8a",
+      "streamId": "gl_6be99873f8784ca092d64ffe16a5b0d7",
+      "state": "ready",
+      "kind": "live"
+    }
+  ],
+  "limit": "未测量浏览器逐帧流畅度；独立模型测试与正式自动队列加载验收分开"
+}

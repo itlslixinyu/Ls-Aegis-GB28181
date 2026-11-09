@@ -1,0 +1,153 @@
+{
+  "model": "Qwen/Qwen3-VL-2B-Instruct-GGUF",
+  "revision": "52d6c8ffea26cc873ac5ad116f8631268d7eb503",
+  "languageQuantization": "Q4_K_M",
+  "visionQuantization": "Q8_0",
+  "runtime": "llama.cpp b12189 win-cpu-x64",
+  "hardware": "Intel i7-8700 / 16 GiB / CPU only",
+  "settings": {
+    "threads": 1,
+    "cpuAffinity": "0x400",
+    "priority": "BelowNormal",
+    "context": 1024,
+    "imageMaxTokens": 256,
+    "inputMaxSide": 448,
+    "maxGeneratedTokens": 160,
+    "temperature": 0,
+    "seed": 2026,
+    "concurrency": 1
+  },
+  "samples": [
+    {
+      "cpuSeconds": 27.984375,
+      "sample": 1,
+      "stdout": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-1.stdout.txt",
+      "healthMaxMs": 9.4494,
+      "peakWorkingSetMiB": 2342.14453125,
+      "stderr": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-1.stderr.txt",
+      "exitCode": 0,
+      "minimumFreeMiB": 2184.015625,
+      "peakPrivateMiB": 1546.57421875,
+      "elapsedSeconds": 33.1228165,
+      "healthFailures": 0,
+      "stopReason": null,
+      "healthChecks": 24,
+      "source": {
+        "file": ".tmp/qwen-caption-inputs/alarm-1.jpg",
+        "snapshotId": "bebd54f1-ef54-40f9-8ead-19b99361cb54",
+        "capturedAt": "2026-11-07T20:40:45.631Z"
+      },
+      "output": "画面中一人仰头向上看，穿着深色上衣，位于室内，背景有天花板和灯具，光线较暗。不确定。\r\n\r\n海康测试摄像机, 仰视, 人, 深色上衣, 室内, 天花板, 灯具"
+    },
+    {
+      "cpuSeconds": 28.6875,
+      "sample": 2,
+      "stdout": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-2.stdout.txt",
+      "healthMaxMs": 9.0135,
+      "peakWorkingSetMiB": 2342.390625,
+      "stderr": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-2.stderr.txt",
+      "exitCode": 0,
+      "minimumFreeMiB": 2160.22265625,
+      "peakPrivateMiB": 1545.765625,
+      "elapsedSeconds": 31.8607273,
+      "healthFailures": 0,
+      "stopReason": null,
+      "healthChecks": 23,
+      "source": {
+        "file": ".tmp/qwen-caption-inputs/alarm-2.jpg",
+        "snapshotId": "c1617281-aa4b-45e7-b416-722c4694d64a",
+        "capturedAt": "2026-11-07T20:45:09.683Z"
+      },
+      "output": "1. 画面中有一名男子，他正抬头向上看，手放在嘴边，穿着深色上衣，位于房间内，背景有吊灯和墙壁。不确定。\r\n\r\n2. 男子，吊灯，深色上衣，房间，抬头，手在嘴边，不确定。"
+    },
+    {
+      "cpuSeconds": 28.34375,
+      "sample": 3,
+      "stdout": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-3.stdout.txt",
+      "healthMaxMs": 32.5491,
+      "peakWorkingSetMiB": 2342.8203125,
+      "stderr": "D:\\监控管理软件\\.tmp\\qwen-caption-results\\sample-3.stderr.txt",
+      "exitCode": 0,
+      "minimumFreeMiB": 2038.578125,
+      "peakPrivateMiB": 1546.5546875,
+      "elapsedSeconds": 32.1396522,
+      "healthFailures": 0,
+      "stopReason": null,
+      "healthChecks": 23,
+      "source": {
+        "file": ".tmp/qwen-caption-inputs/alarm-3.jpg",
+        "snapshotId": "f52ef043-3f70-44d8-8c4c-d71e9f3ad973",
+        "capturedAt": "2026-11-07T20:51:19.180Z"
+      },
+      "output": "一名男子在室内，手托下巴，抬头向上看，身穿深色上衣，位于画面下方，背景有吊灯和墙壁。\r\n\r\n人, 男子, 深色上衣, 室内, 托下巴, 吊灯, 墙壁"
+    }
+  ],
+  "healthChecks": 70,
+  "healthFailures": 0,
+  "maxHealthMs": 32.5491,
+  "before": {
+    "at": "2026-11-07T20:52:09.947Z",
+    "sources": [
+      {
+        "id": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86",
+        "streamId": "gl_30c30c1aa2994be8b4e7b11a0250bdc1",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "0ea46caf-729f-4fad-8748-fc136cc753b4",
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "recordings": [
+      {
+        "id": "4af8265d-f3bc-4150-9103-8d4d2f4d9480",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "files": {
+      "n": 316,
+      "latestRow": 316
+    }
+  },
+  "after": {
+    "at": "2026-11-07T20:56:25.845Z",
+    "sources": [
+      {
+        "id": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86",
+        "streamId": "gl_30c30c1aa2994be8b4e7b11a0250bdc1",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "0ea46caf-729f-4fad-8748-fc136cc753b4",
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "recordings": [
+      {
+        "id": "4af8265d-f3bc-4150-9103-8d4d2f4d9480",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "files": {
+      "n": 318,
+      "latestRow": 318
+    }
+  },
+  "unchanged": {
+    "sources": true,
+    "viewers": true,
+    "recordings": true
+  },
+  "scope": "Existing stored alarm images only; no live capture, no platform restart, no cloud inference; no automatic analysis/search integration",
+  "qualityAssessment": "Three similar indoor-person images only. Descriptions broadly match visible scene; watermark/noise tags and nonconforming label count/format require normalization. Not an accuracy benchmark."
+}

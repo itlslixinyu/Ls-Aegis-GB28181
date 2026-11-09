@@ -1,0 +1,44 @@
+{
+  "name": "gb28181-platform",
+  "private": true,
+  "type": "module",
+  "version": "0.7.1",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "start:development": "node scripts/start.mjs development",
+    "start:test": "node scripts/start.mjs test",
+    "start:production": "node scripts/start.mjs production",
+    "healthcheck": "node scripts/healthcheck.mjs",
+    "db:check": "node scripts/database.mjs check",
+    "db:backup": "node scripts/database.mjs backup",
+    "db:migrate": "node scripts/database.mjs migrate",
+    "test": "node --test backend/*.test.mjs",
+    "test:sip": "node --test backend/sip.test.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "prestart": "npm run build",
+    "format": "prettier --write backend frontend scripts vite.config.mjs tsconfig.json package.json",
+    "ai:setup": "node scripts/setup-ai-local.mjs"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "fast-xml-parser": "^5.11.2",
+    "leaflet": "^1.9.4",
+    "mpegts.js": "^1.8.2",
+    "sharp": "^0.35.5",
+    "vue": "^3.5.44",
+    "ws": "^8.22.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vue-tsc": "^3.3.14"
+  }
+}

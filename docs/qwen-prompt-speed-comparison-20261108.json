@@ -1,0 +1,362 @@
+{
+  "date": "2026-11-08",
+  "cpu": "Intel Core i7-8700, 6 cores/12 logical CPUs",
+  "method": "same five stored JPEGs (four indoor, one outdoor), sequential low-priority single-thread CPU, new process per image, no OS cache flush",
+  "comparisons": [
+    {
+      "sample": "curtain",
+      "inputSha256": "c44a66b58d9da00570c496684d8535a426b832c3a042767bebc68b1c97b0c998",
+      "baseline": {
+        "profile": "baseline",
+        "result": {
+          "summary": "画面中有一件浅色衣物，上面有红色标志，位于画面中央偏左，背景为浅灰色，整体处于静止状态。",
+          "tags": [
+            "衣物",
+            "红色标志",
+            "浅灰色",
+            "静止"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+        "metrics": {
+          "peakWorkingSetMiB": 2342.73828125,
+          "privateMiB": 1546.86328125,
+          "cpuSeconds": 27.796875,
+          "elapsedMs": 28517
+        }
+      },
+      "optimized": {
+        "profile": "optimized",
+        "result": {
+          "summary": "悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。",
+          "tags": [
+            "悬挂布料",
+            "右上角有红色标志",
+            "右下角有黑色物体"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1",
+        "metrics": {
+          "peakWorkingSetMiB": 2335.85546875,
+          "privateMiB": 1539.11328125,
+          "cpuSeconds": 20.5,
+          "elapsedMs": 21374
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。\r\n\r\n悬挂布料，右上角有红色标志，右下角有黑色物体。\r\n\r\n\r\n"
+        }
+      },
+      "speedupPercent": 25.048216853105167
+    },
+    {
+      "sample": "partial",
+      "inputSha256": "59fc2cd2747a40d411a26d6ce85b683076d9d81e36da1a68d57a5e2395a7861a",
+      "baseline": {
+        "profile": "baseline",
+        "result": {
+          "summary": "一名男子站在灰色背景前，身穿深色上衣，画面左侧有红色标志，背景呈弧形结构。",
+          "tags": [
+            "男子",
+            "深色上衣",
+            "灰色背景",
+            "红色标志",
+            "3D弧形结构"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+        "metrics": {
+          "peakWorkingSetMiB": 2342.93359375,
+          "privateMiB": 1546.5859375,
+          "cpuSeconds": 26.375,
+          "elapsedMs": 26855
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n一名男子站在灰色背景前，身穿深色上衣，画面左侧有红色标志，背景呈弧形结构。\r\n\r\n海康威视摄像机, 男子, 深色上衣, 灰色背景, 红色标志, 3D弧形结构\r\n\r\n\r\n"
+        }
+      },
+      "optimized": {
+        "profile": "optimized",
+        "result": {
+          "summary": "画面中有一块悬挂的白色布料，上面有红色小标志，右侧可见一人穿着深色上衣的局部。",
+          "tags": [
+            "悬挂布料",
+            "红色标志",
+            "深色上衣"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1",
+        "metrics": {
+          "peakWorkingSetMiB": 2336.44140625,
+          "privateMiB": 1538.7265625,
+          "cpuSeconds": 22.609375,
+          "elapsedMs": 23845
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n画面中有一块悬挂的白色布料，上面有红色小标志，右侧可见一人穿着深色上衣的局部。\r\n\r\n悬挂布料，红色标志，深色上衣，局部人物。\r\n\r\n\r\n"
+        }
+      },
+      "speedupPercent": 11.208341091044494
+    },
+    {
+      "sample": "person",
+      "inputSha256": "34fa947d9d76e0199a8b65450eeedff0a70d53e475e0d5c35994700c68bb6904",
+      "baseline": {
+        "profile": "baseline",
+        "result": {
+          "summary": "一名男子站在室内，仰头看向上方，背景是灰色的垂直条纹墙面，墙上有一个红色小标志。",
+          "tags": [
+            "人",
+            "墙面",
+            "红色标志",
+            "男子",
+            "仰头",
+            "灰色条纹墙",
+            "红色小标志"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+        "metrics": {
+          "peakWorkingSetMiB": 2341.36328125,
+          "privateMiB": 1545.8984375,
+          "cpuSeconds": 26.359375,
+          "elapsedMs": 29531
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n一名男子站在室内，仰头看向上方，背景是灰色的垂直条纹墙面，墙上有一个红色小标志。\r\n\r\n人, 墙面, 红色标志, 男子, 仰头, 灰色条纹墙, 红色小标志\r\n\r\n\r\n"
+        }
+      },
+      "optimized": {
+        "profile": "optimized",
+        "result": {
+          "summary": "人物位于画面右侧，穿着深色上衣，头部向上仰望。背景为多层褶皱的浅灰色悬挂布料。",
+          "tags": [
+            "悬挂布料",
+            "人物",
+            "深色上衣",
+            "头部向上仰望"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1",
+        "metrics": {
+          "peakWorkingSetMiB": 2336.00390625,
+          "privateMiB": 1539.3984375,
+          "cpuSeconds": 23.640625,
+          "elapsedMs": 24632
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n人物位于画面右侧，穿着深色上衣，头部向上仰望。背景为多层褶皱的浅灰色悬挂布料。\r\n\r\n悬挂布料，人物，深色上衣，头部向上仰望\r\n\r\n\r\n"
+        }
+      },
+      "speedupPercent": 16.589346788120963
+    },
+    {
+      "sample": "ceiling",
+      "inputSha256": "1d91d1fdc041ef0125c3d5ee2f212b07e507d8f01d0e1a21a70db44db815429a",
+      "baseline": {
+        "profile": "baseline",
+        "result": {
+          "summary": "一名男子仰头向上看，身穿深色上衣，位于室内，天花板上悬挂着灯具。",
+          "tags": [
+            "人",
+            "仰头",
+            "深色上衣",
+            "室内",
+            "天花板",
+            "灯具"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+        "metrics": {
+          "peakWorkingSetMiB": 2342.03125,
+          "privateMiB": 1545.76171875,
+          "cpuSeconds": 25.96875,
+          "elapsedMs": 27199
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n一名男子仰头向上看，身穿深色上衣，位于室内，天花板上悬挂着灯具。  \r\n人, 仰头, 深色上衣, 室内, 天花板, 灯具\r\n\r\n\r\n"
+        }
+      },
+      "optimized": {
+        "profile": "optimized",
+        "result": {
+          "summary": "人物仰头看向天花板，穿着深色上衣，背景为室内天花板和吊灯。",
+          "tags": [
+            "吊灯",
+            "天花板",
+            "上衣"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1",
+        "metrics": {
+          "peakWorkingSetMiB": 2336.58984375,
+          "privateMiB": 1538.85546875,
+          "cpuSeconds": 22.0625,
+          "elapsedMs": 22640
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n人物仰头看向天花板，穿着深色上衣，背景为室内天花板和吊灯。\r\n\r\n窗帘，吊灯，天花板，吊灯，上衣\r\n\r\n\r\n"
+        }
+      },
+      "speedupPercent": 16.76164564873709
+    },
+    {
+      "sample": "outdoor",
+      "inputSha256": "df7789feca1937cdbc882bc5974e978c3903360bdf93f96158c8da481556b1a7",
+      "baseline": {
+        "profile": "baseline",
+        "result": {
+          "summary": "夜间城市街景，多辆汽车在道路上行驶，路灯明亮，周围有树木和建筑物。",
+          "tags": [
+            "街道",
+            "汽车",
+            "路灯",
+            "树木",
+            "建筑",
+            "夜景"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+        "metrics": {
+          "peakWorkingSetMiB": 2341.953125,
+          "privateMiB": 1545.796875,
+          "cpuSeconds": 23,
+          "elapsedMs": 23938
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n夜间城市街景，多辆汽车在道路上行驶，路灯明亮，周围有树木和建筑物。  \r\n街道、汽车、路灯、树木、建筑、夜景\r\n\r\n\r\n"
+        }
+      },
+      "optimized": {
+        "profile": "optimized",
+        "result": {
+          "summary": "夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。",
+          "tags": [
+            "道路",
+            "路灯",
+            "车辆",
+            "建筑物",
+            "树木"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1",
+        "metrics": {
+          "peakWorkingSetMiB": 2335.765625,
+          "privateMiB": 1538.96875,
+          "cpuSeconds": 19.78125,
+          "elapsedMs": 20061
+        },
+        "diagnostics": {
+          "rawOutput": "\r\n夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。\r\n\r\n道路、路灯、车辆、建筑物、树木、悬挂布料\r\n\r\n\r\n"
+        }
+      },
+      "speedupPercent": 16.196006349736823
+    }
+  ],
+  "summary": {
+    "baselineMeanMs": 27208,
+    "optimizedMeanMs": 22510.4,
+    "reductionPercent": 17.265510144075268,
+    "optimizedPeakMiB": 2336.58984375
+  },
+  "health": {
+    "checks": 178,
+    "failures": 0,
+    "maxMs": 64.5641,
+    "instances": [
+      "17ffbcae-1757-4aab-84ca-6359038ef941"
+    ]
+  },
+  "media": {
+    "baseline": {
+      "at": "2026-11-07T21:49:25.559Z",
+      "sources": [
+        {
+          "id": "f7ebc2e4-4671-464e-b232-518b29a35769",
+          "streamId": "gl_f48cf6a67de647c9a44077ef7997a2a8",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b759ba8a-213a-43c1-8850-dd9306c3be81",
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "d2483806-774c-450a-96ad-ea6ced14597a",
+          "status": "recording",
+          "error": null,
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "files": 336
+    },
+    "last": {
+      "at": "2026-11-07T22:02:57.061Z",
+      "sources": [
+        {
+          "id": "f7ebc2e4-4671-464e-b232-518b29a35769",
+          "streamId": "gl_f48cf6a67de647c9a44077ef7997a2a8",
+          "state": "ready",
+          "kind": "recording"
+        },
+        {
+          "id": "857fb072-a234-4e22-a895-6dcf4066dd2a",
+          "streamId": "gl_a77d2219e8ec429e9e539b993a46bab0",
+          "state": "ready",
+          "kind": "live"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b759ba8a-213a-43c1-8850-dd9306c3be81",
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        },
+        {
+          "id": "7a0dec79-d07d-467c-9f54-1024b913aa85",
+          "sessionId": "857fb072-a234-4e22-a895-6dcf4066dd2a"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "d2483806-774c-450a-96ad-ea6ced14597a",
+          "status": "recording",
+          "error": null,
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "files": 340
+    },
+    "baselineSourceAndRecordingPreserved": true,
+    "fileGrowth": 4
+  },
+  "limits": [
+    "Only five alarm images; not an accuracy or capacity benchmark",
+    "Position/color descriptions can still be wrong",
+    "Tag grounding checks description agreement, not visual truth",
+    "Current running platform not restarted or switched during isolated comparison",
+    "Historical analysis records unchanged"
+  ]
+}

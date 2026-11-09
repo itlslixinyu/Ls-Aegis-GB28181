@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-07T21:27:56.709Z",
+  "retrievalModel": "Xenova/chinese-clip-vit-base-patch16@f26904860903e70e050b8f48255e5f48401816e9:q8:224",
+  "retrieval": {
+    "dimensions": 512,
+    "imageMs": 2014,
+    "textMs": [
+      479,
+      492
+    ],
+    "personSimilarity": 0.31452580637787675,
+    "carSimilarity": 0.28398881733290193
+  },
+  "qwen": {
+    "result": {
+      "summary": "一名男子仰头向上看，身穿深色上衣，位于室内，天花板上悬挂着灯具。",
+      "tags": [
+        "人",
+        "仰头",
+        "深色上衣",
+        "室内",
+        "天花板",
+        "灯具"
+      ],
+      "objects": [],
+      "observations": []
+    },
+    "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+    "metrics": {
+      "peakWorkingSetMiB": 2341.953125,
+      "privateMiB": 1546.39453125,
+      "cpuSeconds": 29.34375,
+      "elapsedMs": 30614
+    }
+  },
+  "yoloUnavailableAsExpected": true
+}

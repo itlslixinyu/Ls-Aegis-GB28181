@@ -1,0 +1,69 @@
+{
+  "time": "2026-11-07T19:05:46.717Z",
+  "source": "只读真实海康已收尾录像，隔离内存数据库",
+  "cold": {
+    "status": "succeeded",
+    "error": null,
+    "total": 4,
+    "modelCalls": 1,
+    "metrics": {
+      "engine": "Xenova/clip-vit-base-patch32@6b7c523703ae26e39be4b03774966f8571c7f523:q8:224",
+      "cacheHits": 0,
+      "cacheMisses": 4,
+      "localMs": 1766,
+      "peakWorkerMiB": 311,
+      "shortlist": 4,
+      "verified": true
+    },
+    "elapsedMs": 7650,
+    "framesRead": 4,
+    "durationReads": 2
+  },
+  "warm": {
+    "status": "succeeded",
+    "error": null,
+    "total": 4,
+    "modelCalls": 0,
+    "metrics": {
+      "engine": "Xenova/clip-vit-base-patch32@6b7c523703ae26e39be4b03774966f8571c7f523:q8:224",
+      "cacheHits": 4,
+      "cacheMisses": 0,
+      "localMs": 0,
+      "peakWorkerMiB": 0,
+      "shortlist": 4,
+      "verified": true,
+      "verificationCacheHit": true
+    },
+    "elapsedMs": 58,
+    "framesRead": 0,
+    "durationReads": 0
+  },
+  "image": {
+    "status": "succeeded",
+    "error": null,
+    "total": 4,
+    "modelCalls": 0,
+    "metrics": {
+      "engine": "Xenova/clip-vit-base-patch32@6b7c523703ae26e39be4b03774966f8571c7f523:q8:224",
+      "cacheHits": 4,
+      "cacheMisses": 0,
+      "localMs": 161,
+      "peakWorkerMiB": 308,
+      "shortlist": 4,
+      "verified": false
+    },
+    "elapsedMs": 290,
+    "framesRead": 0,
+    "durationReads": 0
+  },
+  "health": {
+    "samples": 31,
+    "maxMs": 46,
+    "statuses": [
+      200
+    ],
+    "instances": [
+      "0c0461e4-eb38-4de5-9b57-e3085b77a184"
+    ]
+  }
+}

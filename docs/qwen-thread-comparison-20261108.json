@@ -1,0 +1,325 @@
+{
+  "date": "2026-11-08",
+  "cpu": "Intel Core i7-8700, 6 cores/12 logical CPUs",
+  "graphics": "Intel UHD Graphics 630; Oray virtual adapter; no discrete GPU enumerated",
+  "method": "same JPEGs and 384px prompt/limits; fresh native process; below-normal priority; fixed CPU masks; no platform restart",
+  "rows": [
+    {
+      "sample": "curtain",
+      "singleMs": 23839,
+      "runs": [
+        {
+          "profile": "optimized",
+          "ms": 23839,
+          "peakMiB": 2336.296875,
+          "result": {
+            "summary": "悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。",
+            "tags": [
+              "悬挂布料",
+              "右上角有红色标志",
+              "右下角有黑色物体"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        },
+        {
+          "profile": "threads2",
+          "ms": 14653,
+          "peakMiB": 2338.63671875,
+          "result": {
+            "summary": "悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。",
+            "tags": [
+              "悬挂布料",
+              "右上角有红色标志",
+              "右下角有黑色物体"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        },
+        {
+          "profile": "threads4",
+          "ms": 11648,
+          "peakMiB": 2339.5078125,
+          "result": {
+            "summary": "悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。",
+            "tags": [
+              "悬挂布料",
+              "右上角有红色标志",
+              "右下角有黑色物体"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        }
+      ]
+    },
+    {
+      "sample": "partial",
+      "singleMs": 23845,
+      "runs": [
+        {
+          "profile": "threads2",
+          "ms": 15275,
+          "peakMiB": 2338.65234375,
+          "result": {
+            "summary": "画面中有一块悬挂的白色布料，上面有红色小标志，右侧可见一人穿着深色上衣的局部。",
+            "tags": [
+              "悬挂布料",
+              "红色标志",
+              "深色上衣"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        },
+        {
+          "profile": "threads4",
+          "ms": 11032,
+          "peakMiB": 2339.3515625,
+          "result": {
+            "summary": "画面中有一块悬挂的白色布料，上面有红色小标志，右侧可见一人穿着深色上衣的局部。",
+            "tags": [
+              "悬挂布料",
+              "红色标志",
+              "深色上衣"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        }
+      ]
+    },
+    {
+      "sample": "outdoor",
+      "singleMs": 20061,
+      "runs": [
+        {
+          "profile": "threads2",
+          "ms": 13956,
+          "peakMiB": 2338.66015625,
+          "result": {
+            "summary": "夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。",
+            "tags": [
+              "道路",
+              "路灯",
+              "车辆",
+              "建筑物",
+              "树木"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        },
+        {
+          "profile": "threads4",
+          "ms": 10565,
+          "peakMiB": 2338.71484375,
+          "result": {
+            "summary": "夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。",
+            "tags": [
+              "道路",
+              "路灯",
+              "车辆",
+              "建筑物",
+              "树木"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        }
+      ]
+    },
+    {
+      "sample": "person",
+      "singleMs": 24632,
+      "runs": [
+        {
+          "profile": "threads4",
+          "ms": 16421,
+          "peakMiB": 2338.21875,
+          "result": {
+            "summary": "人物位于画面右侧，穿着深色上衣，头部向上仰望。背景为多层褶皱的浅灰色悬挂布料。",
+            "tags": [
+              "悬挂布料",
+              "人物",
+              "深色上衣",
+              "头部向上仰望"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        }
+      ]
+    },
+    {
+      "sample": "ceiling",
+      "singleMs": 22640,
+      "runs": [
+        {
+          "profile": "threads4",
+          "ms": 11109,
+          "peakMiB": 2339.640625,
+          "result": {
+            "summary": "人物仰头看向天花板，穿着深色上衣，背景为室内天花板和吊灯。",
+            "tags": [
+              "吊灯",
+              "天花板",
+              "上衣"
+            ],
+            "objects": [],
+            "observations": []
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "twoThreadRangeMs": [
+      13956,
+      15275
+    ],
+    "fourThreadRangeMs": [
+      10565,
+      16421
+    ],
+    "fourThreadMeanMs": 12155,
+    "underFiveSeconds": false,
+    "resultsIdenticalToSingleThread": true
+  },
+  "health": {
+    "count": 68,
+    "failures": 0,
+    "maxMs": 79.72890000000001,
+    "instances": [
+      "17ffbcae-1757-4aab-84ca-6359038ef941"
+    ]
+  },
+  "media": {
+    "baseline": {
+      "at": "2026-11-07T22:05:59.918Z",
+      "sources": [
+        {
+          "id": "f7ebc2e4-4671-464e-b232-518b29a35769",
+          "streamId": "gl_f48cf6a67de647c9a44077ef7997a2a8",
+          "state": "ready",
+          "kind": "recording"
+        },
+        {
+          "id": "857fb072-a234-4e22-a895-6dcf4066dd2a",
+          "streamId": "gl_a77d2219e8ec429e9e539b993a46bab0",
+          "state": "ready",
+          "kind": "live"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b759ba8a-213a-43c1-8850-dd9306c3be81",
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        },
+        {
+          "id": "7a0dec79-d07d-467c-9f54-1024b913aa85",
+          "sessionId": "857fb072-a234-4e22-a895-6dcf4066dd2a"
+        },
+        {
+          "id": "69f21acb-cda0-4eb0-a2d0-adf50f971c65",
+          "sessionId": "857fb072-a234-4e22-a895-6dcf4066dd2a"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "d2483806-774c-450a-96ad-ea6ced14597a",
+          "status": "recording",
+          "error": null,
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "files": 341
+    },
+    "last": {
+      "at": "2026-11-07T22:10:17.948Z",
+      "sources": [
+        {
+          "id": "f7ebc2e4-4671-464e-b232-518b29a35769",
+          "streamId": "gl_f48cf6a67de647c9a44077ef7997a2a8",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b759ba8a-213a-43c1-8850-dd9306c3be81",
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "d2483806-774c-450a-96ad-ea6ced14597a",
+          "status": "recording",
+          "error": null,
+          "sessionId": "f7ebc2e4-4671-464e-b232-518b29a35769"
+        }
+      ],
+      "files": 343
+    },
+    "recordingPreserved": true,
+    "fileGrowth": 2
+  },
+  "preview": [
+    {
+      "stage": "before",
+      "at": "2026-11-07T22:05:35.334Z",
+      "videos": [
+        {
+          "height": 1080,
+          "readyState": 4,
+          "time": 5.98768,
+          "width": 1920
+        }
+      ]
+    },
+    {
+      "stage": "thread-comparison-running",
+      "at": "2026-11-07T22:06:44.021Z",
+      "videos": [
+        {
+          "height": 1080,
+          "readyState": 4,
+          "time": 74.707236,
+          "width": 1920
+        }
+      ]
+    },
+    {
+      "stage": "additional-two-and-four-thread-tests",
+      "at": "2026-11-07T22:08:02.947Z",
+      "videos": [
+        {
+          "height": 1080,
+          "readyState": 4,
+          "time": 153.575816,
+          "width": 1920
+        }
+      ]
+    },
+    {
+      "stage": "after-thread-tests",
+      "at": "2026-11-07T22:08:16.275Z",
+      "videos": [
+        {
+          "height": 1080,
+          "readyState": 4,
+          "time": 166.90951,
+          "width": 1920
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only five images and one camera; not an accuracy/capacity or frame-drop benchmark",
+    "Person sample overlapped regression tests; 16.421s retained as observed variation",
+    "Model times exclude queue and snapshot delay",
+    "Production process still uses old configuration until explicit restart approval"
+  ]
+}

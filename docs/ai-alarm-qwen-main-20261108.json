@@ -1,0 +1,200 @@
+{
+  "environment": "current-platform",
+  "date": "2026-11-08",
+  "settings": {
+    "qwenEnabled": true,
+    "intervalSeconds": 120,
+    "retentionDays": 7,
+    "cloudEnabled": false
+  },
+  "schemaVersion": 21,
+  "health": {
+    "count": 80,
+    "failures": 0,
+    "maxMs": 674.5626000000047,
+    "instances": [
+      "761f3c83-4e56-4ab5-8253-a7c19bb5743b"
+    ]
+  },
+  "media": {
+    "baseline": {
+      "at": "2026-11-07T21:19:29.170Z",
+      "sources": [
+        {
+          "id": "a3051001-7575-480a-9caa-bfbf71910c85",
+          "streamId": "gl_b579bd6b6b25403c97090aa33951eec6",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b8b12c91-cd94-486d-984f-ddee3f3ade0e",
+          "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2ba8c8bb-a9eb-4dba-b95c-0543bfacd482",
+          "status": "recording",
+          "error": null,
+          "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+        }
+      ],
+      "files": {
+        "n": 326,
+        "latestRow": 326
+      },
+      "analyses": []
+    },
+    "last": {
+      "at": "2026-11-07T21:22:58.860Z",
+      "sources": [
+        {
+          "id": "a3051001-7575-480a-9caa-bfbf71910c85",
+          "streamId": "gl_b579bd6b6b25403c97090aa33951eec6",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "b8b12c91-cd94-486d-984f-ddee3f3ade0e",
+          "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2ba8c8bb-a9eb-4dba-b95c-0543bfacd482",
+          "status": "recording",
+          "error": null,
+          "sessionId": "a3051001-7575-480a-9caa-bfbf71910c85"
+        }
+      ],
+      "files": {
+        "n": 327,
+        "latestRow": 327
+      },
+      "analyses": [
+        {
+          "id": "495c8938-26da-418d-b2d8-859e0fbc2a54",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"画面中有一人站在灰色的大型物体旁，该物体呈弧形，表面有红色标志，人物穿着深色衣物，姿态静止。\",\"tags\":[\"人\",\"灰色物体\",\"深色衣物\",\"3至6个搜索关键词\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.171875,\"privateMiB\":1545.765625,\"cpuSeconds\":28.9375,\"elapsedMs\":31229}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "alarmId": "0073fa1d-9060-41b2-85e4-e9c9a480299e",
+          "capturedAt": "2026-11-07T21:15:42.863Z",
+          "startedAt": "2026-11-07T21:19:33.817Z"
+        },
+        {
+          "id": "8f79b981-2b16-4509-af08-995d784307eb",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"一名男子仰头看向上方，身穿黑色上衣，背景为灰色垂直条纹墙面，左上角有红色小标志。\",\"tags\":[\"人\",\"墙面\",\"黑色上衣\",\"仰视\",\"红色标志\",\"墙面条纹\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.63671875,\"privateMiB\":1546.3984375,\"cpuSeconds\":28.984375,\"elapsedMs\":30168}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "alarmId": "00d498b4-afb2-4df2-8f98-1ea2e00013a6",
+          "capturedAt": "2026-11-07T21:19:46.378Z",
+          "startedAt": "2026-11-07T21:20:34.028Z"
+        },
+        {
+          "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+          "status": "queued",
+          "error": "其他AI任务优先，等待资源",
+          "result": null,
+          "usage": null,
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "alarmId": "63bd63cd-6c39-4986-b73f-673c71638c08",
+          "capturedAt": "2026-11-07T21:21:56.306Z",
+          "startedAt": null
+        }
+      ]
+    },
+    "unchangedAfterRecovery": true,
+    "fileGrowth": 1
+  },
+  "analyses": [
+    {
+      "id": "495c8938-26da-418d-b2d8-859e0fbc2a54",
+      "status": "succeeded",
+      "error": null,
+      "result": {
+        "summary": "画面中有一人站在灰色的大型物体旁，该物体呈弧形，表面有红色标志，人物穿着深色衣物，姿态静止。",
+        "tags": [
+          "人",
+          "灰色物体",
+          "深色衣物",
+          "3至6个搜索关键词"
+        ],
+        "objects": [],
+        "observations": []
+      },
+      "usage": {
+        "local": true,
+        "peakWorkingSetMiB": 2342.171875,
+        "privateMiB": 1545.765625,
+        "cpuSeconds": 28.9375,
+        "elapsedMs": 31229
+      },
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+      "finishedAt": "2026-11-07T21:20:05.080Z",
+      "alarmId": "0073fa1d-9060-41b2-85e4-e9c9a480299e",
+      "capturedAt": "2026-11-07T21:15:42.863Z",
+      "startedAt": "2026-11-07T21:19:33.817Z"
+    },
+    {
+      "id": "8f79b981-2b16-4509-af08-995d784307eb",
+      "status": "succeeded",
+      "error": null,
+      "result": {
+        "summary": "一名男子仰头看向上方，身穿黑色上衣，背景为灰色垂直条纹墙面，左上角有红色小标志。",
+        "tags": [
+          "人",
+          "墙面",
+          "黑色上衣",
+          "仰视",
+          "红色标志",
+          "墙面条纹"
+        ],
+        "objects": [],
+        "observations": []
+      },
+      "usage": {
+        "local": true,
+        "peakWorkingSetMiB": 2342.63671875,
+        "privateMiB": 1546.3984375,
+        "cpuSeconds": 28.984375,
+        "elapsedMs": 30168
+      },
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+      "finishedAt": "2026-11-07T21:21:04.219Z",
+      "alarmId": "00d498b4-afb2-4df2-8f98-1ea2e00013a6",
+      "capturedAt": "2026-11-07T21:19:46.378Z",
+      "startedAt": "2026-11-07T21:20:34.028Z"
+    },
+    {
+      "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+      "status": "queued",
+      "error": "其他AI任务优先，等待资源",
+      "result": null,
+      "usage": null,
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+      "finishedAt": null,
+      "alarmId": "63bd63cd-6c39-4986-b73f-673c71638c08",
+      "capturedAt": "2026-11-07T21:21:56.306Z",
+      "startedAt": null
+    }
+  ],
+  "search": {
+    "query": "黑色上衣",
+    "hits": 1,
+    "openedCompletedRecord": "8f79b981-2b16-4509-af08-995d784307eb",
+    "cloudReview": false
+  },
+  "limits": [
+    "本次升级已获准重启并造成录像空档；媒体比较从恢复后开始",
+    "未测量浏览器逐帧卡顿，不代表任何负载下零影响",
+    "小模型可能漏检、误述或产生杂项标签"
+  ]
+}

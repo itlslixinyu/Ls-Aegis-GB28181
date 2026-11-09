@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-11-07T21:42:11.604Z",
+  "mode": "real-database-readonly-existing-service-methods",
+  "checks": [
+    {
+      "id": "6d75533f-7de6-4ddc-882d-2de16ece08ef",
+      "capturedAt": "2026-11-07T21:26:51.642Z",
+      "alarmId": "172b0d11-fa98-45a9-a8cf-e962f146affa",
+      "status": "succeeded",
+      "summary": "画面中有一件浅色衣物，上面有红色标志，位于画面中央偏左，背景为浅灰色，整体处于静止状态。",
+      "tags": [
+        "衣物",
+        "红色标志",
+        "浅灰色",
+        "静止"
+      ],
+      "query": "浅色衣物",
+      "listFound": true,
+      "searchFound": true,
+      "searchHits": 2,
+      "score": 100,
+      "imageUrl": "/api/v1/ai/analyses/6d75533f-7de6-4ddc-882d-2de16ece08ef/image",
+      "imageBytes": 37032,
+      "imageMatchesAlarm": true
+    },
+    {
+      "id": "5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854",
+      "capturedAt": "2026-11-07T21:24:30.392Z",
+      "alarmId": "0a5e0a01-0519-43e6-84b3-cedbf33fedf3",
+      "status": "succeeded",
+      "summary": "一名男子站在灰色背景前，身穿深色上衣，画面左侧有红色标志，背景呈弧形结构。",
+      "tags": [
+        "男子",
+        "深色上衣",
+        "灰色背景",
+        "红色标志",
+        "3D弧形结构"
+      ],
+      "query": "深色上衣",
+      "listFound": true,
+      "searchFound": true,
+      "searchHits": 8,
+      "score": 100,
+      "imageUrl": "/api/v1/ai/analyses/5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854/image",
+      "imageBytes": 40859,
+      "imageMatchesAlarm": true
+    },
+    {
+      "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+      "capturedAt": "2026-11-07T21:21:56.306Z",
+      "alarmId": "63bd63cd-6c39-4986-b73f-673c71638c08",
+      "status": "succeeded",
+      "summary": "一名男子站在室内，仰头看向上方，背景是灰色的垂直条纹墙面，墙上有一个红色小标志。",
+      "tags": [
+        "人",
+        "墙面",
+        "红色标志",
+        "男子",
+        "仰头",
+        "灰色条纹墙",
+        "红色小标志"
+      ],
+      "query": "仰头",
+      "listFound": true,
+      "searchFound": true,
+      "searchHits": 2,
+      "score": 100,
+      "imageUrl": "/api/v1/ai/analyses/1e2c605c-a410-4d2a-9f83-b14fcf80121e/image",
+      "imageBytes": 39720,
+      "imageMatchesAlarm": true
+    }
+  ],
+  "browser": {
+    "from": "2026-11-08T05:20:00+08:00",
+    "to": "2026-11-08T05:28:00+08:00",
+    "semanticReview": false,
+    "checks": [
+      {
+        "query": "浅色衣物",
+        "images": [
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/6d75533f-7de6-4ddc-882d-2de16ece08ef/image",
+            "width": 960
+          }
+        ]
+      },
+      {
+        "query": "深色上衣",
+        "images": [
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854/image",
+            "width": 960
+          }
+        ]
+      },
+      {
+        "query": "仰头",
+        "images": [
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/1e2c605c-a410-4d2a-9f83-b14fcf80121e/image",
+            "width": 960
+          }
+        ]
+      },
+      {
+        "query": "红色标志",
+        "images": [
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/6d75533f-7de6-4ddc-882d-2de16ece08ef/image",
+            "width": 960
+          },
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854/image",
+            "width": 960
+          },
+          {
+            "loaded": true,
+            "src": "/api/v1/ai/analyses/1e2c605c-a410-4d2a-9f83-b14fcf80121e/image",
+            "width": 960
+          }
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-07T21:44:30.900Z",
+    "analysisListThreeRowsVisible": true
+  },
+  "qualityObservation": "最新图片主要为窗帘，模型误述为浅色衣物；未改写原记录",
+  "limits": [
+    "搜索按已保存描述及标签匹配，不代表描述全部准确",
+    "连续告警共用图片并按120秒采样，非每条原始告警都新增分析",
+    "本次只读核验，无重启、无重新分析、不改动已有记录或媒体任务"
+  ]
+}

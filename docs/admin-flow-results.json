@@ -1,0 +1,206 @@
+{
+  "startedAt": "2026-11-01T04:45:10.162Z",
+  "checks": [
+    {
+      "name": "真实admin登录及角色",
+      "status": "passed"
+    },
+    {
+      "name": "新建分组",
+      "status": "passed"
+    },
+    {
+      "name": "添加20位国标设备档案",
+      "status": "passed"
+    },
+    {
+      "name": "编辑设备名称",
+      "status": "passed"
+    },
+    {
+      "name": "重复国标编号被拒绝",
+      "status": "passed"
+    },
+    {
+      "name": "配置设备接入密码",
+      "status": "passed"
+    },
+    {
+      "name": "保存并读取媒体传输配置 UDP",
+      "status": "passed"
+    },
+    {
+      "name": "保存并读取媒体传输配置 TCP-PASSIVE",
+      "status": "passed"
+    },
+    {
+      "name": "保存并读取媒体传输配置 TCP-ACTIVE",
+      "status": "passed"
+    },
+    {
+      "name": "设备加入分组",
+      "status": "passed"
+    },
+    {
+      "name": "设备搜索与分页",
+      "status": "passed"
+    },
+    {
+      "name": "手工位置保存与地图读取",
+      "status": "passed"
+    },
+    {
+      "name": "创建临时只读账号",
+      "status": "passed"
+    },
+    {
+      "name": "只读账号默认无设备权限",
+      "status": "passed"
+    },
+    {
+      "name": "分组授权后仅能看到测试设备",
+      "status": "passed"
+    },
+    {
+      "name": "只读账号不能新增设备",
+      "status": "passed"
+    },
+    {
+      "name": "撤销分组后即时失去设备和地图权限",
+      "status": "passed"
+    },
+    {
+      "name": "未注册设备订阅停留等待态 Alarm",
+      "status": "passed"
+    },
+    {
+      "name": "未注册设备订阅停留等待态 MobilePosition",
+      "status": "passed"
+    },
+    {
+      "name": "存在有效订阅时阻止删除设备",
+      "status": "passed"
+    },
+    {
+      "name": "停止订阅并回收至disabled",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /system/config",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /media-nodes",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /recording-plans",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /recording-jobs",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /alarms",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /map/config",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /cascade/platforms",
+      "status": "passed"
+    },
+    {
+      "name": "管理入口读取 /audit",
+      "status": "passed"
+    },
+    {
+      "name": "未注册设备目录同步明确拒绝",
+      "status": "passed"
+    },
+    {
+      "name": "未注册设备不生成虚假通道",
+      "status": "passed"
+    },
+    {
+      "name": "历史轨迹为空且手工点位不充当轨迹",
+      "status": "passed"
+    }
+  ],
+  "blocked": [
+    {
+      "name": "真实SIP注册和目录同步",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "实时画面解码与物理云台",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "设备录像检索和回放",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "录像下载与计划录制文件",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "真实告警和位置NOTIFY及轨迹",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "实际上级国标级联与媒体转发",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    },
+    {
+      "name": "公网HTTPS、NAT与带宽长稳",
+      "status": "not_verified",
+      "reason": "设备和媒体节点尚未部署；没有实际公网及上级平台环境"
+    }
+  ],
+  "cleanup": [
+    {
+      "name": "订阅停止",
+      "status": "passed"
+    },
+    {
+      "name": "临时账号删除",
+      "status": "passed"
+    },
+    {
+      "name": "临时设备删除",
+      "status": "passed"
+    },
+    {
+      "name": "临时分组删除",
+      "status": "passed"
+    }
+  ],
+  "before": {
+    "devices": 1,
+    "groups": 1,
+    "users": 1
+  },
+  "after": {
+    "devices": 1,
+    "groups": 1,
+    "users": 1
+  },
+  "dataRestored": true,
+  "finishedAt": "2026-11-01T04:45:11.073Z",
+  "temporaryIds": {
+    "code": "34020000001328310271",
+    "group": "4280e764-77e6-4fad-a3bf-4debc0457a84",
+    "device": "3cc25ade-5fe0-4e6b-b668-9b796cc5417b",
+    "user": "9e7bd5ed-dcc1-4262-ba85-b8bf903bd8a4"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "environment": "isolated",
+  "simulatedAlarm": true,
+  "realStoredHikvisionImage": true,
+  "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+  "status": "succeeded",
+  "capturedAt": "2026-11-07T20:40:45.631Z",
+  "result": {
+    "summary": "一名男子仰头向上看，身穿深色上衣，位于室内，天花板上悬挂着灯具。",
+    "tags": [
+      "人",
+      "仰头",
+      "深色上衣",
+      "室内",
+      "天花板",
+      "灯具"
+    ],
+    "objects": [],
+    "observations": []
+  },
+  "usage": {
+    "local": true,
+    "peakWorkingSetMiB": 2342.8515625,
+    "privateMiB": 1546.37890625,
+    "cpuSeconds": 26.921875,
+    "elapsedMs": 28197
+  },
+  "keyword": "深色上衣",
+  "browserSearchHits": 1
+}

@@ -1,0 +1,48 @@
+{
+  "model": "Xenova/chinese-clip-vit-base-patch16",
+  "revision": "f26904860903e70e050b8f48255e5f48401816e9",
+  "dtype": "q8",
+  "license": "MIT (upstream OFA-Sys project; converted model card has no separate license field)",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 844,
+      "sha256": "19447ad8c20d274f0644a6663af56286be98bd2d0e5f9472fcb318e04fcd6961"
+    },
+    {
+      "file": "preprocessor_config.json",
+      "bytes": 546,
+      "sha256": "61a78fdd2c7ac17b54b6190c0f4cb23423192c535003d52528d01e318a47608b"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 439124,
+      "sha256": "7dfbf1966ebf99d471c3796e9b457329d2b2182b817e144f1e904b957745c839"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 1315,
+      "sha256": "38fbc894183595cc1168e36150251b2fb658197b3a49f6908cce88ae22acd52a"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    {
+      "file": "vocab.txt",
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    {
+      "file": "onnx/model_quantized.onnx",
+      "bytes": 190842404,
+      "sha256": "a2c2849329eafb24100acec5a9421a39f8cb445296444c5c98855b69e5e7a751"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1973,
+      "sha256": "273183f3846fe3441aa7903b2479f0f07fea81272d24d03bed7f1f5c973b4f64"
+    }
+  ]
+}

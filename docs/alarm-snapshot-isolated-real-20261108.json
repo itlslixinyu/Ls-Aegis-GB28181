@@ -1,0 +1,61 @@
+{
+  "simulatedAlarm": true,
+  "realExistingHikvisionStream": true,
+  "elapsedMs": 1089,
+  "bytes": 26319,
+  "photo": {
+    "id": "223e9a99-487d-4d4f-9d4e-40447132d5e6",
+    "status": "ready",
+    "error": null,
+    "requestedAt": "2026-11-07T20:37:38.216Z",
+    "capturedAt": "2026-11-07T20:37:39.303Z",
+    "url": "/api/v1/alarms/adc70e4a-82b3-4b1b-b9b5-e10ba846af87/snapshot"
+  },
+  "before": {
+    "sources": [
+      {
+        "id": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94",
+        "streamId": "gl_7127b9eff0974d8a89534367f62449b2",
+        "state": "ready"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "1e742f7b-7643-458c-8aa1-bf934929b4c1",
+        "sessionId": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94"
+      }
+    ],
+    "recording": [
+      {
+        "id": "e0f0390c-6db9-4318-9bce-9b8b8da1448b",
+        "status": "recording",
+        "error": null,
+        "sessionId": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94"
+      }
+    ]
+  },
+  "after": {
+    "sources": [
+      {
+        "id": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94",
+        "streamId": "gl_7127b9eff0974d8a89534367f62449b2",
+        "state": "ready"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "1e742f7b-7643-458c-8aa1-bf934929b4c1",
+        "sessionId": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94"
+      }
+    ],
+    "recording": [
+      {
+        "id": "e0f0390c-6db9-4318-9bce-9b8b8da1448b",
+        "status": "recording",
+        "error": null,
+        "sessionId": "4f7bcc4b-6f24-41c7-aaee-2a27c2ff6f94"
+      }
+    ]
+  },
+  "sourceAndLeaseAndRecordingUnchanged": true
+}

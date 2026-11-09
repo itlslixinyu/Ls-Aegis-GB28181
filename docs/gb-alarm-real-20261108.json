@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-11-07T20:04:38.240Z",
+  "device": "DS-IPC-T12HV3-LA",
+  "firmware": "V5.7.20 build241205",
+  "protocol": "GB/T28181-2022 UDP",
+  "physicalTrigger": "用户确认已在检测区域走动",
+  "guard": {
+    "id": "5c083928-8061-4644-b63c-4a9635aa72f9",
+    "status": "succeeded",
+    "error": null,
+    "createdAt": "2026-11-07T20:02:56.183Z"
+  },
+  "subscription": {
+    "kind": "Alarm",
+    "status": "active",
+    "acceptedAt": "2026-11-07T20:02:38.823Z",
+    "lastNotifyAt": "2026-11-07T20:04:24.606Z",
+    "error": null
+  },
+  "alarms": {
+    "method": "5",
+    "type": "2",
+    "count": 66,
+    "firstReceivedAt": "2026-11-07T20:02:27.527Z",
+    "lastReceivedAt": "2026-11-07T20:04:24.603Z",
+    "receivedCount": 114
+  },
+  "samples": [
+    {
+      "id": "95abc351-cd02-4bcb-b557-26bfad4aa80e",
+      "method": "5",
+      "type": "2",
+      "priority": 4,
+      "occurredAt": "2026-11-07T20:04:26.000Z",
+      "receivedAt": "2026-11-07T20:04:24.603Z",
+      "repeatCount": 2
+    },
+    {
+      "id": "b03cb776-b55a-4b77-ace0-a76c0256ed08",
+      "method": "5",
+      "type": "2",
+      "priority": 4,
+      "occurredAt": "2026-11-07T20:04:25.000Z",
+      "receivedAt": "2026-11-07T20:04:23.600Z",
+      "repeatCount": 2
+    },
+    {
+      "id": "19baabe3-e083-4bc0-9cc8-c1ffe839c0de",
+      "method": "5",
+      "type": "2",
+      "priority": 4,
+      "occurredAt": "2026-11-07T20:04:24.000Z",
+      "receivedAt": "2026-11-07T20:04:22.594Z",
+      "repeatCount": 2
+    }
+  ],
+  "recording": {
+    "status": "recording",
+    "error": null,
+    "createdAt": "2026-11-07T20:04:08.607Z"
+  },
+  "media": [
+    {
+      "state": "ready",
+      "n": 1
+    }
+  ]
+}

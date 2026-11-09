@@ -1,0 +1,490 @@
+{
+  "startedAt": "2026-11-08T05:03:03.970Z",
+  "completedAt": "2026-11-08T05:14:52.121Z",
+  "verdict": "未全面通过：8张中4张产生可用结果，4张被拒绝；其中3张为合法位置重复导致误拒绝。另有具体目标缺乏依据、时间戳混入描述、反光主体过度具体化等质量问题。",
+  "counts": {
+    "uniqueImages": 8,
+    "initialModelRuns": 8,
+    "diagnosticReruns": 4,
+    "totalNativeProcesses": 12,
+    "usableResults": 4,
+    "rejectedResults": 4,
+    "falseRejections": 3
+  },
+  "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:640:p6i1:t2",
+  "profile": {
+    "size": 640,
+    "imageTokens": 512,
+    "minImageTokens": 256,
+    "context": 2048,
+    "ubatch": 64,
+    "startMemoryMiB": 3584,
+    "outputTokens": 224,
+    "prompt": "列出图片中主要可见的物体，最多5项。输出JSON，items每项包含name物体名称、color可辨认的颜色（不清楚填空字符串）、position画面位置。忽略水印文字，只写静态可见物体，不推测动作和身份。",
+    "groundTags": true,
+    "inventory": true,
+    "threads": 2,
+    "cpuMask": "0x500",
+    "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:640:p6i1:t2"
+  },
+  "runnerSha256": "12a23d39df532c3997e141f4a9570bab27feee5232f570c416646d3290675c20",
+  "frozenInference": true,
+  "sourceUnchanged": true,
+  "method": "先人工看图选样并固定标签；只用真实告警原始JPEG，不裁剪作为模型输入、不使用模拟或生成图片；模型提示不含参考答案。失败诊断仅用临时源码副本附加错误的原始输出，不改推理或校验。8张首轮与4张同配置复跑均独立启动进程，无结果缓存。",
+  "scope": "同一海康摄像机的室内人物、日间/过曝/夜间道路、屏幕及强反光物体；不是随机样本，不代表跨设备、多人、小目标或全场景准确率。",
+  "samples": [
+    {
+      "number": 1,
+      "key": "person-side",
+      "scene": "室内侧脸、墙面与吊灯",
+      "capturedAt": "2026-11-07T20:41:35.242Z",
+      "alarmId": "113c3f3a-0e4f-47a4-82c9-81c728479cd5",
+      "snapshotId": "afa73c0b-40f1-493b-9943-8dd631c123f7",
+      "imageSha256": "89cc6fba80eed37c167d17391cb46463c951f2cfe5ce1af316e189da4c36b929",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/person-side.jpg",
+      "provenance": {
+        "id": "2ff5e23f-e4dc-4dce-8e97-948e56b54a72",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": true,
+        "car": false,
+        "note": "可清楚看见一个人的头部；无车辆"
+      },
+      "initialRun": {
+        "result": {
+          "summary": "人（黑色，右下角），墙壁（白色，上半部分），天花板（灰色，顶部），灯具（白色，顶部），监控摄像头（黑色，左上角）。",
+          "tags": [
+            "人",
+            "黑色",
+            "墙壁",
+            "白色",
+            "天花板",
+            "灰色",
+            "灯具",
+            "监控摄像头"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "error": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.94140625,
+          "privateMiB": 1708.53125,
+          "cpuSeconds": 60.609375,
+          "elapsedMs": 32657
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"人\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"右下角\"\r\n    },\r\n    {\r\n      \"name\": \"墙壁\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"上半部分\"\r\n    },\r\n    {\r\n      \"name\": \"天花板\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"顶部\"\r\n    },\r\n    {\r\n      \"name\": \"灯具\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"顶部\"\r\n    },\r\n    {\r\n      \"name\": \"监控摄像头\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"左上角\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "diagnosticRerun": null,
+      "manualReview": {
+        "primary": "有人、无车判断正确",
+        "detail": "未完全通过：额外写出监控摄像头（黑色，左上角），该具体目标/位置缺少清晰画面依据。",
+        "level": "unsupported-detail"
+      }
+    },
+    {
+      "number": 2,
+      "key": "person-edge",
+      "scene": "画面右侧局部人物与窗帘",
+      "capturedAt": "2026-11-07T21:24:30.392Z",
+      "alarmId": "0a5e0a01-0519-43e6-84b3-cedbf33fedf3",
+      "snapshotId": "8e2fd637-18d4-4c0f-a55f-a94f36c266f9",
+      "imageSha256": "59fc2cd2747a40d411a26d6ce85b683076d9d81e36da1a68d57a5e2395a7861a",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/person-edge.jpg",
+      "provenance": {
+        "id": "0a5e0a01-0519-43e6-84b3-cedbf33fedf3",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": true,
+        "car": false,
+        "note": "可见部分头部及深色上衣，无车辆"
+      },
+      "initialRun": {
+        "result": {
+          "summary": "窗帘（灰色，左侧），徽章（红色，窗帘上），人（黑色，右侧）。",
+          "tags": [
+            "窗帘",
+            "灰色",
+            "徽章",
+            "红色",
+            "人",
+            "黑色"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "error": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.94921875,
+          "privateMiB": 1708.41015625,
+          "cpuSeconds": 51.3125,
+          "elapsedMs": 27603
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"窗帘\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"左侧\"\r\n    },\r\n    {\r\n      \"name\": \"徽章\",\r\n      \"color\": \"红色\",\r\n      \"position\": \"窗帘上\"\r\n    },\r\n    {\r\n      \"name\": \"人\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"右侧\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "diagnosticRerun": null,
+      "manualReview": {
+        "primary": "有人、无车判断正确",
+        "detail": "人物在右侧、灰色窗帘及红色徽章基本符合画面。",
+        "level": "pass"
+      }
+    },
+    {
+      "number": 3,
+      "key": "car-day",
+      "scene": "白天道路及停车区",
+      "capturedAt": "2026-11-08T04:53:28.203Z",
+      "alarmId": "7f0603b1-fe69-42a6-96fb-05a4758d5a09",
+      "snapshotId": "08477577-09e7-4cc8-92bd-5d8f02749755",
+      "imageSha256": "3ee39c95053c60db36b5eba082b01f66d1de6bb253068af5a6ee944521fa6fbe",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/car-day.jpg",
+      "provenance": {
+        "id": "7f0603b1-fe69-42a6-96fb-05a4758d5a09",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": null,
+        "car": true,
+        "note": "多辆汽车清楚可见；不把远景当人员负例"
+      },
+      "initialRun": {
+        "result": null,
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "metrics": null,
+        "rawOutput": null
+      },
+      "diagnosticRerun": {
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "result": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2316.87890625,
+          "privateMiB": 1710.296875,
+          "cpuSeconds": 64.46875,
+          "elapsedMs": 34422
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"建筑物\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面左上角和右上角\"\r\n    },\r\n    {\r\n      \"name\": \"道路\",\r\n      \"color\": \"深灰色\",\r\n      \"position\": \"画面中央和下方\"\r\n    },\r\n    {\r\n      \"name\": \"汽车\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中下部，道路交叉口附近\"\r\n    },\r\n    {\r\n      \"name\": \"树木\",\r\n      \"color\": \"黄色\",\r\n      \"position\": \"画面中部和右侧\"\r\n    },\r\n    {\r\n      \"name\": \"交通标线\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中下部，道路交叉口\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "manualReview": {
+        "primary": "诊断原始输出已识别白色汽车；正式同版解析流程拒绝结果",
+        "detail": "汽车与交通标线共享画面中下部的位置片段，被当成重复描述误拒绝。",
+        "level": "false-rejection"
+      }
+    },
+    {
+      "number": 4,
+      "key": "car-overexposed",
+      "scene": "明显过曝的道路",
+      "capturedAt": "2026-11-08T02:49:00.647Z",
+      "alarmId": "25b1763b-0bff-4bd8-bbdd-d6d7e96825d8",
+      "snapshotId": "a7c54fca-234a-4306-9ff7-d7ccca4225cd",
+      "imageSha256": "a682fb38620e06ad4e7292ce41522dc3b5c0abb66e441981d93670f69ac711d3",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/car-overexposed.jpg",
+      "provenance": {
+        "id": "8ab77286-c23c-44bd-b32f-3beb5ea36428",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": null,
+        "car": true,
+        "note": "虽明显过曝，沿街和路口仍可辨多辆汽车"
+      },
+      "initialRun": {
+        "result": {
+          "summary": "建筑物（白色，画面左上角和中间），汽车（黑色，画面中下部道路），树木（黄色，画面中部和右侧），道路（灰色，画面中央贯穿整个场景），交通标志（白色，画面左侧）。",
+          "tags": [
+            "建筑物",
+            "白色",
+            "汽车",
+            "黑色",
+            "树木",
+            "黄色",
+            "道路",
+            "灰色",
+            "交通标志"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "error": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.9765625,
+          "privateMiB": 1710.3203125,
+          "cpuSeconds": 59.140625,
+          "elapsedMs": 32279
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"建筑物\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面左上角和中间\"\r\n    },\r\n    {\r\n      \"name\": \"汽车\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"画面中下部道路\"\r\n    },\r\n    {\r\n      \"name\": \"树木\",\r\n      \"color\": \"黄色\",\r\n      \"position\": \"画面中部和右侧\"\r\n    },\r\n    {\r\n      \"name\": \"道路\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"画面中央贯穿整个场景\"\r\n    },\r\n    {\r\n      \"name\": \"交通标志\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面左侧\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "diagnosticRerun": null,
+      "manualReview": {
+        "primary": "识别出汽车",
+        "detail": "黑色汽车描述有可见依据；交通标志这一具体对象不能明确核实，可能把标线泛称标志。",
+        "level": "uncertain-detail"
+      }
+    },
+    {
+      "number": 5,
+      "key": "car-night",
+      "scene": "夜间路口及强路灯光",
+      "capturedAt": "2026-11-07T21:55:41.478Z",
+      "alarmId": "0f3f7233-1172-452f-a424-2fdf0da9438a",
+      "snapshotId": "84819166-96fe-4b2c-adfc-9fe65ab86cb4",
+      "imageSha256": "1daee353d0aa7f39ace2050da7bca9b13b06691d2d6193ce5d04b5ffbb41c4c3",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/car-night.jpg",
+      "provenance": {
+        "id": "0f3f7233-1172-452f-a424-2fdf0da9438a",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": null,
+        "car": true,
+        "note": "沿街可见多辆白色汽车，不能仅依赖灯光猜车"
+      },
+      "initialRun": {
+        "result": null,
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "metrics": null,
+        "rawOutput": null
+      },
+      "diagnosticRerun": {
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "result": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.8671875,
+          "privateMiB": 1710.359375,
+          "cpuSeconds": 59.328125,
+          "elapsedMs": 31692
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"建筑物\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"左上角\"\r\n    },\r\n    {\r\n      \"name\": \"道路\",\r\n      \"color\": \"深色\",\r\n      \"position\": \"中下部\"\r\n    },\r\n    {\r\n      \"name\": \"车辆\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"中下部\"\r\n    },\r\n    {\r\n      \"name\": \"路灯\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"右侧\"\r\n    },\r\n    {\r\n      \"name\": \"树木\",\r\n      \"color\": \"绿色\",\r\n      \"position\": \"中间和左侧\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "manualReview": {
+        "primary": "诊断原始输出已识别白色车辆；解析流程拒绝结果",
+        "detail": "道路与车辆都在中下部，合法重复位置片段中下部）触发重复校验。",
+        "level": "false-rejection"
+      }
+    },
+    {
+      "number": 6,
+      "key": "empty-reflection",
+      "scene": "灰度近距离强反光物体",
+      "capturedAt": "2026-11-07T22:25:49.440Z",
+      "alarmId": "0b866ebd-064e-4c53-a5ab-d8f392f125fb",
+      "snapshotId": "26cf2f0a-f9e0-46b4-9714-6bd3bc97a435",
+      "imageSha256": "185b1a0899f48934bf4be682a87eccce89df9c00ea6a02c91c88203e32057a64",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/empty-reflection.jpg",
+      "provenance": {
+        "id": "0b866ebd-064e-4c53-a5ab-d8f392f125fb",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": false,
+        "car": false,
+        "note": "无真实人体或车辆；具体物体类别无法可靠人工确定"
+      },
+      "initialRun": {
+        "result": null,
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "metrics": null,
+        "rawOutput": null
+      },
+      "diagnosticRerun": {
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "result": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.84375,
+          "privateMiB": 1710.24609375,
+          "cpuSeconds": 59.390625,
+          "elapsedMs": 32288
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"车辆前灯\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中央\"\r\n    },\r\n    {\r\n      \"name\": \"车头灯罩\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"画面中央偏上\"\r\n    },\r\n    {\r\n      \"name\": \"反光镜\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面左下角\"\r\n    },\r\n    {\r\n      \"name\": \"车头灯\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中央\"\r\n    },\r\n    {\r\n      \"name\": \"车头灯\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中央\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "manualReview": {
+        "primary": "未通过；不能当成可靠无人无车结果",
+        "detail": "将强反光主体具体称为车辆前灯/车头灯/反光镜，且车头灯整项重复。原物体类别本身不够清晰，无法严谨核实具体部件，不能硬算为车辆识别正确，也不使用它估计无人无车准确率。失败保留，另补明确无人的显示器样本。",
+        "level": "ambiguous-reference-and-repetition"
+      }
+    },
+    {
+      "number": 7,
+      "key": "empty-screen",
+      "scene": "斜拍显示器和画面递归",
+      "capturedAt": "2026-11-07T22:24:00.532Z",
+      "alarmId": "0ef830e8-3083-422e-b7c5-86339df4f891",
+      "snapshotId": "17ce1a0d-0165-49fd-bf96-3e5cac6f18e9",
+      "imageSha256": "1d5f74c4b2b94eacf72f01449c9ad64b28e9788d94c7d38860821d28fedd35bf",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/empty-screen.jpg",
+      "provenance": {
+        "id": "a4b2f320-13f9-4b54-b5b4-c4e4d96ed91c",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": false,
+        "car": false,
+        "note": "显示器及屏幕画面，无人物或车辆"
+      },
+      "initialRun": {
+        "result": {
+          "summary": "电脑屏幕（紫色，画面右上角），网页界面（白色，画面中央偏左），浏览器窗口（蓝色，画面左侧），时间戳（白色，画面左上角），文字（黑色，画面右侧）。",
+          "tags": [
+            "电脑屏幕",
+            "紫色",
+            "网页界面",
+            "白色",
+            "浏览器窗口",
+            "蓝色",
+            "文字",
+            "黑色"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "error": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.96484375,
+          "privateMiB": 1710.29296875,
+          "cpuSeconds": 59.328125,
+          "elapsedMs": 31654
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"电脑屏幕\",\r\n      \"color\": \"紫色\",\r\n      \"position\": \"画面右上角\"\r\n    },\r\n    {\r\n      \"name\": \"网页界面\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中央偏左\"\r\n    },\r\n    {\r\n      \"name\": \"浏览器窗口\",\r\n      \"color\": \"蓝色\",\r\n      \"position\": \"画面左侧\"\r\n    },\r\n    {\r\n      \"name\": \"时间戳\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面左上角\"\r\n    },\r\n    {\r\n      \"name\": \"文字\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"画面右侧\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "diagnosticRerun": null,
+      "manualReview": {
+        "primary": "未误报人或车辆",
+        "detail": "仍把应忽略的时间戳列成物体写入描述；这不属于场景目标描述合格。",
+        "level": "instruction-violation"
+      }
+    },
+    {
+      "number": 8,
+      "key": "empty-screen-wide",
+      "scene": "斜拍显示器及暗色室内墙面",
+      "capturedAt": "2026-11-07T22:26:50.693Z",
+      "alarmId": "1901de9e-34e5-4220-a11e-1bffa82bc191",
+      "snapshotId": "7ab73166-5574-4786-a2d2-39267d7f6f74",
+      "imageSha256": "1a9cb47b4ca62033e8f4aaf613047e17c682bfcd20102e936681b4bb62b019ed",
+      "evidenceFile": "docs/evidence/qwen-multiscene-20261108/empty-screen-wide.jpg",
+      "provenance": {
+        "id": "1901de9e-34e5-4220-a11e-1bffa82bc191",
+        "deviceId": "bbeaaa07-385d-4171-803c-15a29fee51f4",
+        "deviceName": "海康摄像机 · test",
+        "method": "5",
+        "type": "2"
+      },
+      "initialExpectations": {
+        "person": false,
+        "car": false,
+        "note": "补充明确无人无车的对照；原反光图仍保留，不删除失败"
+      },
+      "initialRun": {
+        "result": null,
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "metrics": null,
+        "rawOutput": null
+      },
+      "diagnosticRerun": {
+        "error": {
+          "code": "QWEN_INVALID_RESULT",
+          "message": "本地模型描述重复、复述指令或存在矛盾，识别结果不可靠"
+        },
+        "result": null,
+        "metrics": {
+          "peakWorkingSetMiB": 2507.26953125,
+          "privateMiB": 1710.09375,
+          "cpuSeconds": 61.359375,
+          "elapsedMs": 34524
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"电脑显示器\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"左上角\"\r\n    },\r\n    {\r\n      \"name\": \"屏幕内容\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"左上角\"\r\n    },\r\n    {\r\n      \"name\": \"图像\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"左上角\"\r\n    },\r\n    {\r\n      \"name\": \"文字\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"右下角\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n"
+      },
+      "manualReview": {
+        "primary": "诊断原始输出未误报人车，但解析流程拒绝结果",
+        "detail": "显示器、屏幕内容、图像都在左上角；相同位置左上角）被当作重复描述误拒绝。",
+        "level": "false-rejection"
+      }
+    }
+  ],
+  "serviceChecks": {
+    "firstSevenRunsHealthChecks": 88,
+    "firstSevenRunsHealthFailures": 0,
+    "firstSevenRunsMaxHealthMs": 84.51209999999992,
+    "healthAfter": {
+      "status": "ok",
+      "instanceId": "54fcdd71-91cf-47eb-b10c-4d5aa45e2541",
+      "restartState": "idle",
+      "database": "sqlite",
+      "sip": "listening",
+      "media": "unchecked"
+    },
+    "plansUnchanged": true,
+    "recordingsAfter": [
+      {
+        "id": "bb1c2b60-2cdd-4cf0-8e21-1e74447a51c6",
+        "status": "recording",
+        "error": null,
+        "sourceState": "ready"
+      }
+    ],
+    "filesBefore": 476,
+    "filesAfter": 480,
+    "settingsBefore": {
+      "localEnabled": true,
+      "qwenAlarmEnabled": true,
+      "indexEnabled": true,
+      "qwenAlarmIntervalSeconds": 120
+    },
+    "settingsAfter": {
+      "localEnabled": true,
+      "qwenAlarmEnabled": true,
+      "indexEnabled": true,
+      "qwenAlarmIntervalSeconds": 120
+    },
+    "settingsRestored": true
+  },
+  "limitations": [
+    "无人无车不能与无法判别混用；反光样本具体物体类别不明，单列困难样本。",
+    "只4张在当前完整后处理流程中产生可用结果；原始输出正确不等于平台能给出结果。",
+    "本轮未修复或发布代码，未改写已有分析记录，未重启服务，未控制真实设备。"
+  ]
+}

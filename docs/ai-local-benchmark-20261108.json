@@ -1,0 +1,19 @@
+{
+  "model": "Xenova/clip-vit-base-patch32@6b7c523703ae26e39be4b03774966f8571c7f523:q8:224",
+  "time": "2026-11-07T18:47:59.721Z",
+  "device": "CPU",
+  "threads": 1,
+  "imageColdMs": 1314,
+  "imageWarmMs": [
+    129,
+    115,
+    136,
+    122,
+    153
+  ],
+  "textColdMs": 837,
+  "peakWorkerMiB": 335,
+  "identicalImageCosine": 1,
+  "textSimilarity": 0.22706997785845282,
+  "scope": "单张既有录像画面的模型基准，不代表64路吞吐或检索准确率"
+}

@@ -1,0 +1,211 @@
+{
+  "verifiedAt": "2026-11-08T04:26:17.486Z",
+  "runnerSha256": "12a23d39df532c3997e141f4a9570bab27feee5232f570c416646d3290675c20",
+  "original": {
+    "imageSha256": "690959c05edcdc9f5afce615d8763a88890be1baa276eca8ff60669c8d39f967",
+    "profile": {
+      "size": 640,
+      "imageTokens": 512,
+      "minImageTokens": 256,
+      "context": 2048,
+      "ubatch": 64,
+      "startMemoryMiB": 3584,
+      "outputTokens": 224,
+      "prompt": "列出图片中主要可见的物体，最多5项。输出JSON，items每项包含name物体名称、color可辨认的颜色（不清楚填空字符串）、position画面位置。忽略水印文字，只写静态可见物体，不推测动作和身份。",
+      "groundTags": true,
+      "inventory": true,
+      "threads": 2,
+      "cpuMask": "0x500",
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:640:p6i1:t2"
+    },
+    "passed": true,
+    "runs": [
+      {
+        "result": {
+          "summary": "建筑物（灰色，画面中央和右侧），道路（深色，画面下方和中间），汽车（白色，画面中下部和右上部分），树木（黄色，画面中部和左侧），交通标线（白色，画面下方和交叉路口）。",
+          "tags": [
+            "建筑物",
+            "灰色",
+            "道路",
+            "深色",
+            "汽车",
+            "白色",
+            "树木",
+            "黄色",
+            "交通标线"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "metrics": {
+          "peakWorkingSetMiB": 2508.0078125,
+          "privateMiB": 1710.39453125,
+          "cpuSeconds": 66.890625,
+          "elapsedMs": 36332
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"建筑物\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"画面中央和右侧\"\r\n    },\r\n    {\r\n      \"name\": \"道路\",\r\n      \"color\": \"深色\",\r\n      \"position\": \"画面下方和中间\"\r\n    },\r\n    {\r\n      \"name\": \"汽车\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中下部和右上部分\"\r\n    },\r\n    {\r\n      \"name\": \"树木\",\r\n      \"color\": \"黄色\",\r\n      \"position\": \"画面中部和左侧\"\r\n    },\r\n    {\r\n      \"name\": \"交通标线\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面下方和交叉路口\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n",
+        "passed": true
+      },
+      {
+        "result": {
+          "summary": "建筑物（灰色，画面中央和右侧），道路（深色，画面下方和中间），汽车（白色，画面中下部和右上部分），树木（黄色，画面中部和左侧），交通标线（白色，画面下方和交叉路口）。",
+          "tags": [
+            "建筑物",
+            "灰色",
+            "道路",
+            "深色",
+            "汽车",
+            "白色",
+            "树木",
+            "黄色",
+            "交通标线"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "metrics": {
+          "peakWorkingSetMiB": 2507.82421875,
+          "privateMiB": 1708.6953125,
+          "cpuSeconds": 66.828125,
+          "elapsedMs": 36328
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"建筑物\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"画面中央和右侧\"\r\n    },\r\n    {\r\n      \"name\": \"道路\",\r\n      \"color\": \"深色\",\r\n      \"position\": \"画面下方和中间\"\r\n    },\r\n    {\r\n      \"name\": \"汽车\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面中下部和右上部分\"\r\n    },\r\n    {\r\n      \"name\": \"树木\",\r\n      \"color\": \"黄色\",\r\n      \"position\": \"画面中部和左侧\"\r\n    },\r\n    {\r\n      \"name\": \"交通标线\",\r\n      \"color\": \"白色\",\r\n      \"position\": \"画面下方和交叉路口\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n",
+        "passed": true
+      }
+    ]
+  },
+  "control": {
+    "imageSha256": "34fa947d9d76e0199a8b65450eeedff0a70d53e475e0d5c35994700c68bb6904",
+    "profile": {
+      "size": 640,
+      "imageTokens": 512,
+      "minImageTokens": 256,
+      "context": 2048,
+      "ubatch": 64,
+      "startMemoryMiB": 3584,
+      "outputTokens": 224,
+      "prompt": "列出图片中主要可见的物体，最多5项。输出JSON，items每项包含name物体名称、color可辨认的颜色（不清楚填空字符串）、position画面位置。忽略水印文字，只写静态可见物体，不推测动作和身份。",
+      "groundTags": true,
+      "inventory": true,
+      "threads": 2,
+      "cpuMask": "0x500",
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:640:p6i1:t2"
+    },
+    "passed": true,
+    "runs": [
+      {
+        "result": {
+          "summary": "人（黑色，右上角），窗帘（灰色，左侧和中间），徽章（红色，窗帘上）。",
+          "tags": [
+            "人",
+            "黑色",
+            "窗帘",
+            "灰色",
+            "徽章",
+            "红色"
+          ],
+          "objects": [],
+          "observations": []
+        },
+        "metrics": {
+          "peakWorkingSetMiB": 2507.83203125,
+          "privateMiB": 1708.35546875,
+          "cpuSeconds": 58.3125,
+          "elapsedMs": 34628
+        },
+        "rawOutput": "\r\n{\r\n  \"items\": [\r\n    {\r\n      \"name\": \"人\",\r\n      \"color\": \"黑色\",\r\n      \"position\": \"右上角\"\r\n    },\r\n    {\r\n      \"name\": \"窗帘\",\r\n      \"color\": \"灰色\",\r\n      \"position\": \"左侧和中间\"\r\n    },\r\n    {\r\n      \"name\": \"徽章\",\r\n      \"color\": \"红色\",\r\n      \"position\": \"窗帘上\"\r\n    }\r\n  ]\r\n}\r\n\r\n\r\n",
+        "passed": true
+      }
+    ]
+  },
+  "checks": {
+    "backend": 30,
+    "frontend": 5,
+    "typecheck": true,
+    "build": true
+  },
+  "formal": {
+    "enabled": true,
+    "verified": true,
+    "result": {
+      "at": "2026-11-08T04:37:37.736Z",
+      "id": "ee4a5d80-0cc9-400c-92e6-fad9f54c0465",
+      "alarmId": "34092976-507a-47f7-8dc2-cfa0c5b81f07",
+      "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:640:p6i1:t2",
+      "status": "succeeded",
+      "capturedAt": "2026-11-08T03:45:41.012Z",
+      "finishedAt": "2026-11-08T04:34:33.991Z",
+      "imageSha256": "690959c05edcdc9f5afce615d8763a88890be1baa276eca8ff60669c8d39f967",
+      "sameOriginalImage": true,
+      "result": {
+        "summary": "建筑物（灰色，画面中央和右侧），道路（深色，画面下方和中间），汽车（白色，画面中下部和右上部分），树木（黄色，画面中部和左侧），交通标线（白色，画面下方和交叉路口）。",
+        "tags": [
+          "建筑物",
+          "灰色",
+          "道路",
+          "深色",
+          "汽车",
+          "白色",
+          "树木",
+          "黄色",
+          "交通标线"
+        ],
+        "objects": [],
+        "observations": []
+      },
+      "usage": {
+        "local": true,
+        "reanalysis": true,
+        "peakWorkingSetMiB": 2507.9296875,
+        "privateMiB": 1710.1953125,
+        "cpuSeconds": 66.40625,
+        "elapsedMs": 35976
+      },
+      "passed": true
+    },
+    "platform": {
+      "at": "2026-11-08T04:37:31.494Z",
+      "homepage": 200,
+      "health": {
+        "status": "ok",
+        "instanceId": "54fcdd71-91cf-47eb-b10c-4d5aa45e2541",
+        "restartState": "idle",
+        "database": "sqlite",
+        "sip": "listening",
+        "media": "unchecked"
+      },
+      "assets": [
+        {
+          "path": "/assets/index-BBdBAV2n.js",
+          "status": 200
+        },
+        {
+          "path": "/assets/index-2em4etXM.css",
+          "status": 200
+        }
+      ],
+      "plansUnchanged": true,
+      "active": [
+        {
+          "id": "bb1c2b60-2cdd-4cf0-8e21-1e74447a51c6",
+          "status": "recording",
+          "error": null,
+          "sessionId": "ef5718d0-71a7-409b-beef-e7c08e4bcc4e",
+          "sourceState": "ready"
+        }
+      ],
+      "filesBefore": 464,
+      "filesNow": 468
+    },
+    "settings": {
+      "localEnabled": true,
+      "qwenAlarmEnabled": true,
+      "indexEnabled": true,
+      "qwenAlarmIntervalSeconds": 120
+    },
+    "screenshots": [
+      "docs/qwen-quality-formal-desktop-20261108.png",
+      "docs/qwen-quality-formal-narrow-20261108.png"
+    ]
+  }
+}

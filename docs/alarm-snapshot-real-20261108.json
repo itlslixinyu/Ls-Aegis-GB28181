@@ -1,0 +1,90 @@
+{
+  "device": "DS-IPC-T12HV3-LA",
+  "firmware": "V5.7.20 build241205",
+  "protocol": "GB/T28181-2022 UDP",
+  "physicalTriggerConfirmed": true,
+  "photo": {
+    "id": "afa73c0b-40f1-493b-9943-8dd631c123f7",
+    "status": "ready",
+    "error": null,
+    "requestedAt": "2026-11-07T20:41:34.107Z",
+    "capturedAt": "2026-11-07T20:41:35.242Z",
+    "bytes": 32927
+  },
+  "alarms": [
+    {
+      "id": "2ff5e23f-e4dc-4dce-8e97-948e56b54a72",
+      "method": "5",
+      "type": "2",
+      "receivedAt": "2026-11-07T20:41:34.106Z",
+      "snapshotId": "afa73c0b-40f1-493b-9943-8dd631c123f7"
+    },
+    {
+      "id": "a526d3e1-0486-4143-92c7-62986f176c6f",
+      "method": "5",
+      "type": "2",
+      "receivedAt": "2026-11-07T20:41:35.110Z",
+      "snapshotId": "afa73c0b-40f1-493b-9943-8dd631c123f7"
+    },
+    {
+      "id": "7a9481e1-924c-4caf-9266-c19e91d62281",
+      "method": "5",
+      "type": "2",
+      "receivedAt": "2026-11-07T20:41:36.113Z",
+      "snapshotId": "afa73c0b-40f1-493b-9943-8dd631c123f7"
+    }
+  ],
+  "before": {
+    "at": "2026-11-07T20:40:37.951Z",
+    "sources": [
+      {
+        "id": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86",
+        "streamId": "gl_30c30c1aa2994be8b4e7b11a0250bdc1",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "0ea46caf-729f-4fad-8748-fc136cc753b4",
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "recording": [
+      {
+        "id": "4af8265d-f3bc-4150-9103-8d4d2f4d9480",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "snapshots": []
+  },
+  "after": {
+    "at": "2026-11-07T20:41:37.236Z",
+    "sources": [
+      {
+        "id": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86",
+        "streamId": "gl_30c30c1aa2994be8b4e7b11a0250bdc1",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "viewers": [
+      {
+        "id": "0ea46caf-729f-4fad-8748-fc136cc753b4",
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ],
+    "recording": [
+      {
+        "id": "4af8265d-f3bc-4150-9103-8d4d2f4d9480",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2e84c2ec-13f7-4b55-8c5d-5c8437c32e86"
+      }
+    ]
+  },
+  "sourceLeaseRecordingUnchanged": true,
+  "captureMs": 1135
+}

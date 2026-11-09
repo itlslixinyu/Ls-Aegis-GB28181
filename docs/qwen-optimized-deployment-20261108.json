@@ -1,0 +1,312 @@
+{
+  "authorizedProfile": "threads2",
+  "checkedAt": "2026-11-07T22:24:28.759Z",
+  "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2",
+  "backup": {
+    "backup": "backups/qwen-tune-1794089791605/platform.db",
+    "before": {
+      "integrity": "ok",
+      "version": 21,
+      "counts": {
+        "alarms": 738,
+        "ai_jobs": 60,
+        "alarm_snapshots": 64,
+        "recording_files": 345
+      }
+    },
+    "upgradeCopy": {
+      "integrity": "ok",
+      "foreignKeyErrors": 0,
+      "version": 22,
+      "counts": {
+        "alarms": 738,
+        "ai_jobs": 60,
+        "alarm_snapshots": 64,
+        "recording_files": 345
+      }
+    }
+  },
+  "schemaVersion": 22,
+  "integrity": "ok",
+  "analysis": {
+    "id": "ae38ed40-e5bc-47da-b2e0-2bcb65acf78f",
+    "status": "succeeded",
+    "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1:t2",
+    "alarmId": "0d7e0bdb-568b-499d-a37c-8decd0944696",
+    "capturedAt": "2026-11-07T21:56:24.587Z",
+    "createdAt": "2026-11-07T22:21:51.080Z",
+    "finishedAt": "2026-11-07T22:22:06.152Z",
+    "result": {
+      "summary": "夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。",
+      "tags": [
+        "道路",
+        "路灯",
+        "车辆",
+        "建筑物",
+        "树木"
+      ],
+      "objects": [],
+      "observations": []
+    },
+    "usage": {
+      "local": true,
+      "peakWorkingSetMiB": 2337.890625,
+      "privateMiB": 1540.23828125,
+      "cpuSeconds": 23.140625,
+      "elapsedMs": 13745
+    },
+    "imageMatchesOriginal": true
+  },
+  "search": {
+    "query": "路灯",
+    "from": "2026-11-08T05:56:00+08:00",
+    "to": "2026-11-08T05:57:00+08:00",
+    "hits": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/api/v1/ai/analyses/ae38ed40-e5bc-47da-b2e0-2bcb65acf78f/image",
+        "width": 960
+      }
+    ]
+  },
+  "health": {
+    "finalEpochChecks": 95,
+    "finalEpochFailures": 0,
+    "finalEpochMaxMs": 750.7603999999992,
+    "observedInstances": [
+      "87483033-59a5-4ff5-b52f-c92d3c3654c0",
+      null,
+      "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    ],
+    "overallFailures": 2
+  },
+  "media": {
+    "baseline": {
+      "at": "2026-11-07T22:20:30.325Z",
+      "sources": [
+        {
+          "id": "fad45b5b-6999-419d-b28b-d17cf488be09",
+          "streamId": "gl_89f2ae451f184fd8830462b325f3c16f",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "7014d0b2-61c7-4b47-9555-e5d9881e0f43",
+          "sessionId": "fad45b5b-6999-419d-b28b-d17cf488be09"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "804a405b-8caa-40d7-bdac-62a0c2975509",
+          "status": "recording",
+          "error": null,
+          "sessionId": "fad45b5b-6999-419d-b28b-d17cf488be09"
+        }
+      ],
+      "files": {
+        "n": 347,
+        "latestRow": 347
+      },
+      "qwen": [
+        {
+          "id": "16b5af06-0ab2-43d9-8965-26473aa8eedf",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"夜间城市道路交叉口，车辆在湿滑路面行驶，路灯照亮街道，远处有建筑和树木。\",\"tags\":[\"城市道路\",\"汽车\",\"路灯\",\"湿滑路面\",\"夜间\",\"建筑\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.9140625,\"privateMiB\":1546.85546875,\"cpuSeconds\":25.328125,\"elapsedMs\":26365}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:55:41.478Z",
+          "startedAt": "2026-11-07T21:55:41.616Z"
+        },
+        {
+          "id": "6d75533f-7de6-4ddc-882d-2de16ece08ef",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"画面中有一件浅色衣物，上面有红色标志，位于画面中央偏左，背景为浅灰色，整体处于静止状态。\",\"tags\":[\"衣物\",\"红色标志\",\"浅灰色\",\"静止\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.04296875,\"privateMiB\":1545.3046875,\"cpuSeconds\":24.484375,\"elapsedMs\":25279}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:26:51.642Z",
+          "startedAt": "2026-11-07T21:34:49.574Z"
+        },
+        {
+          "id": "5ffbb2ab-7211-4fa6-8c4c-e58d4e57f854",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"一名男子站在灰色背景前，身穿深色上衣，画面左侧有红色标志，背景呈弧形结构。\",\"tags\":[\"男子\",\"深色上衣\",\"灰色背景\",\"红色标志\",\"3D弧形结构\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2341.3515625,\"privateMiB\":1545.859375,\"cpuSeconds\":28.46875,\"elapsedMs\":29652}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:24:30.392Z",
+          "startedAt": "2026-11-07T21:33:49.347Z"
+        },
+        {
+          "id": "1e2c605c-a410-4d2a-9f83-b14fcf80121e",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"一名男子站在室内，仰头看向上方，背景是灰色的垂直条纹墙面，墙上有一个红色小标志。\",\"tags\":[\"人\",\"墙面\",\"红色标志\",\"男子\",\"仰头\",\"灰色条纹墙\",\"红色小标志\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.19140625,\"privateMiB\":1545.87890625,\"cpuSeconds\":26.03125,\"elapsedMs\":26859}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:21:56.306Z",
+          "startedAt": "2026-11-07T21:31:57.443Z"
+        }
+      ]
+    },
+    "last": {
+      "at": "2026-11-07T22:23:44.615Z",
+      "sources": [
+        {
+          "id": "fad45b5b-6999-419d-b28b-d17cf488be09",
+          "streamId": "gl_89f2ae451f184fd8830462b325f3c16f",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "viewers": [
+        {
+          "id": "7014d0b2-61c7-4b47-9555-e5d9881e0f43",
+          "sessionId": "fad45b5b-6999-419d-b28b-d17cf488be09"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "804a405b-8caa-40d7-bdac-62a0c2975509",
+          "status": "recording",
+          "error": null,
+          "sessionId": "fad45b5b-6999-419d-b28b-d17cf488be09"
+        }
+      ],
+      "files": {
+        "n": 348,
+        "latestRow": 348
+      },
+      "qwen": [
+        {
+          "id": "1a841554-a6c2-4cff-9be0-84e1fab19ad4",
+          "status": "running",
+          "error": null,
+          "result": null,
+          "usage": null,
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1:t2",
+          "capturedAt": "2026-11-07T22:23:31.350Z",
+          "startedAt": "2026-11-07T22:23:32.746Z"
+        },
+        {
+          "id": "ae38ed40-e5bc-47da-b2e0-2bcb65acf78f",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"夜景中，道路两旁路灯亮起，车辆在道路上行驶，远处有建筑物和树木。\",\"tags\":[\"道路\",\"路灯\",\"车辆\",\"建筑物\",\"树木\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2337.890625,\"privateMiB\":1540.23828125,\"cpuSeconds\":23.140625,\"elapsedMs\":13745}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1:t2",
+          "capturedAt": "2026-11-07T21:56:24.587Z",
+          "startedAt": "2026-11-07T22:21:52.387Z"
+        },
+        {
+          "id": "16b5af06-0ab2-43d9-8965-26473aa8eedf",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"夜间城市道路交叉口，车辆在湿滑路面行驶，路灯照亮街道，远处有建筑和树木。\",\"tags\":[\"城市道路\",\"汽车\",\"路灯\",\"湿滑路面\",\"夜间\",\"建筑\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.9140625,\"privateMiB\":1546.85546875,\"cpuSeconds\":25.328125,\"elapsedMs\":26365}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:55:41.478Z",
+          "startedAt": "2026-11-07T21:55:41.616Z"
+        },
+        {
+          "id": "6d75533f-7de6-4ddc-882d-2de16ece08ef",
+          "status": "succeeded",
+          "error": null,
+          "result": "{\"summary\":\"画面中有一件浅色衣物，上面有红色标志，位于画面中央偏左，背景为浅灰色，整体处于静止状态。\",\"tags\":[\"衣物\",\"红色标志\",\"浅灰色\",\"静止\"],\"objects\":[],\"observations\":[]}",
+          "usage": "{\"local\":true,\"peakWorkingSetMiB\":2342.04296875,\"privateMiB\":1545.3046875,\"cpuSeconds\":24.484375,\"elapsedMs\":25279}",
+          "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+          "capturedAt": "2026-11-07T21:26:51.642Z",
+          "startedAt": "2026-11-07T21:34:49.574Z"
+        }
+      ]
+    },
+    "recordingSourceStable": true,
+    "finalizedFile": {
+      "id": "ae86e228-eae3-438d-9a6e-8dff3fc6df2f",
+      "name": "2026-11-08-06-20-30-0.mp4",
+      "date": "2026-11-08",
+      "bytes": 2509561
+    },
+    "currentFileCount": 348,
+    "initialPostRestartJob": {
+      "id": "804a405b-8caa-40d7-bdac-62a0c2975509",
+      "status": "recording",
+      "error": null,
+      "sessionId": "fad45b5b-6999-419d-b28b-d17cf488be09",
+      "streamId": "gl_89f2ae451f184fd8830462b325f3c16f"
+    },
+    "followUpAfterCameraAdjustment": {
+      "event": {
+        "at": "2026-11-08T06:27:24+08:00",
+        "previousJob": "804a405b-8caa-40d7-bdac-62a0c2975509",
+        "error": "媒体流已断开"
+      },
+      "automaticRecoveryAt": "2026-11-08T06:32:55+08:00",
+      "currentJob": {
+        "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+        "streamId": "gl_18812871c93044ccb9ea52e14486a912"
+      },
+      "currentSource": {
+        "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+        "state": "ready",
+        "error": null
+      },
+      "checks": 32,
+      "stable": true,
+      "file": {
+        "id": "69b246e1-ff61-4db3-a014-f8b0b4412894",
+        "name": "2026-11-08-06-32-57-0.mp4",
+        "date": "2026-11-08",
+        "bytes": 2573857
+      },
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "aac"
+          },
+          {
+            "codec_name": "hevc",
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "format": {
+          "duration": "180.031000",
+          "size": "2573857"
+        }
+      }
+    }
+  },
+  "limits": [
+    "一次授权重启；06:18:56另有其他进程重启，按最终实例验证",
+    "历史成功分析不覆盖；本次对既有未分析图片新建一条记录",
+    "新告警自动采样规则未改；本次正式实例通过手动提交已有图片验证新运行器",
+    "5秒目标未达到；本机冷启动耗时不包含抓图或排队",
+    "用户确认期间调整过摄像机；其后一次断流及计划自动恢复已单列记录，不宣称全程无中断"
+  ],
+  "finalCheckedAt": "2026-11-07T22:37:24.688Z",
+  "preview": {
+    "initialRequestTimedOut": true,
+    "recoveredByPageReload": true,
+    "previousPlayingTime": 108.467653,
+    "current": [
+      {
+        "height": 1080,
+        "readyState": 4,
+        "time": 183.073982,
+        "width": 1920
+      }
+    ],
+    "liveSessionId": "ecd27421-f809-4201-a535-789d2d38a138"
+  },
+  "userConfirmedCameraAdjustment": true
+}

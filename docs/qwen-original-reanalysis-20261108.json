@@ -1,0 +1,474 @@
+{
+  "id": "6d75533f-7de6-4ddc-882d-2de16ece08ef",
+  "requestedAt": "2026-11-07T22:42:49.759Z",
+  "oldResult": {
+    "summary": "画面中有一件浅色衣物，上面有红色标志，位于画面中央偏左，背景为浅灰色，整体处于静止状态。",
+    "tags": [
+      "衣物",
+      "红色标志",
+      "浅灰色",
+      "静止"
+    ],
+    "objects": [],
+    "observations": []
+  },
+  "oldModel": "local-qwen3-vl-2b-q4-k-m:q8-vision:448:v1",
+  "imageSha256": "c44a66b58d9da00570c496684d8535a426b832c3a042767bebc68b1c97b0c998",
+  "health": [
+    {
+      "status": 200,
+      "ms": 55.87049999999999,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 16.380699999999933,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.346199999999953,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.58030000000008,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.506500000000415,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.343900000000758,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 16.26889999999912,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 16.74000000000069,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.20510000000104,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.708300000000236,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.269900000001144,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.121800000000803,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 16.730100000000675,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.103299999998853,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 17.920999999998457,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    },
+    {
+      "status": 200,
+      "ms": 16.860599999999977,
+      "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+    }
+  ],
+  "media": [
+    {
+      "at": "2026-11-07T22:42:49.821Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:50.850Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:51.870Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:52.904Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:53.938Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:54.968Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:56.001Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:57.020Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:58.040Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:42:59.062Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:00.095Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:01.127Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:02.157Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:03.175Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:04.206Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    },
+    {
+      "at": "2026-11-07T22:43:05.224Z",
+      "sources": [
+        {
+          "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+          "state": "ready",
+          "kind": "recording"
+        }
+      ],
+      "recordings": [
+        {
+          "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+          "status": "recording",
+          "error": null,
+          "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+        }
+      ],
+      "files": 353
+    }
+  ],
+  "status": "succeeded",
+  "newResult": {
+    "summary": "悬挂的白色褶皱布料，右上角有红色小标志，右下角有黑色物体。",
+    "tags": [
+      "悬挂布料",
+      "右上角有红色标志",
+      "右下角有黑色物体"
+    ],
+    "objects": [],
+    "observations": []
+  },
+  "model": "local-qwen3-vl-2b-q4-k-m:q8-vision:384:p3g1:t2",
+  "usage": {
+    "local": true,
+    "peakWorkingSetMiB": 2337.953125,
+    "privateMiB": 1540.30859375,
+    "cpuSeconds": 21.28125,
+    "elapsedMs": 14135
+  },
+  "finishedAt": "2026-11-07T22:43:04.710Z",
+  "capturedAt": "2026-11-07T21:26:51.642Z",
+  "originalIdentityAndImagePreserved": true,
+  "search": {
+    "newKeyword": "悬挂布料",
+    "targetFound": true,
+    "newHits": 1,
+    "oldKeyword": "衣物",
+    "targetNoLongerMatched": true,
+    "oldHits": 0
+  },
+  "browserVerification": {
+    "at": "2026-11-07T22:45:11.571Z",
+    "rangeLocal": [
+      "2026-11-08T05:26",
+      "2026-11-08T05:27"
+    ],
+    "mode": "仅查已有分析画面",
+    "newKeyword": "悬挂布料",
+    "newHits": 1,
+    "oldKeyword": "衣物",
+    "oldHits": 0,
+    "imageUrl": "/api/v1/ai/analyses/6d75533f-7de6-4ddc-882d-2de16ece08ef/image",
+    "imageLoaded": true,
+    "imageWidth": 960
+  },
+  "finalMedia": {
+    "at": "2026-11-07T22:45:11.572Z",
+    "sources": [
+      {
+        "id": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2",
+        "state": "ready",
+        "kind": "recording"
+      }
+    ],
+    "recordings": [
+      {
+        "id": "2f821b2f-7279-4a60-ad54-2ffbfed7a81e",
+        "status": "recording",
+        "error": null,
+        "sessionId": "2c784167-2d5f-4a2c-abbb-64edc36c3ac2"
+      }
+    ],
+    "files": 353
+  },
+  "finalHealth": {
+    "status": 200,
+    "instance": "b271a6f2-cc47-45ed-b990-f56d7643ffd2"
+  },
+  "knownLimitation": "衣物误识别已消失，但红色标志的方位仍被模型误写为右上角；未手工修改模型输出。"
+}

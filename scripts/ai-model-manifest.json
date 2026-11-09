@@ -1,0 +1,58 @@
+{
+  "model": "Xenova/clip-vit-base-patch32",
+  "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+  "dtype": "q8",
+  "license": "MIT",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 4524,
+      "sha256": "493ef57ff783e42d1530c91b53469b7fdf8db8a9c1408e86998fcb7899a4f495"
+    },
+    {
+      "file": "preprocessor_config.json",
+      "bytes": 520,
+      "sha256": "6f638fb9401a6d6296feff533ee7efe657b787c49f954f82f5906b36ef2a1b1f"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 2224119,
+      "sha256": "f7f3b7af117d467b58374797691a6438d3e6b9e9cef800dfd5dced7f697a90cd"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 775,
+      "sha256": "60ba2912bc6344c94bc16bbdec27fa1209409167b6f2fdf3cfe9e65462ea3967"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 472,
+      "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac"
+    },
+    {
+      "file": "vocab.json",
+      "bytes": 862328,
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+    },
+    {
+      "file": "merges.txt",
+      "bytes": 524619,
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+    },
+    {
+      "file": "onnx/text_model_quantized.onnx",
+      "bytes": 64504507,
+      "sha256": "73baab855d406190da9faa498cfedf65f15cf309f4cc7385b7b032e6d08e5c3a"
+    },
+    {
+      "file": "onnx/vision_model_quantized.onnx",
+      "bytes": 89117001,
+      "sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1417,
+      "sha256": "ae287015b60eb7ca1d40e726c550af1988977c24f0005f123274d52490c20d8d"
+    }
+  ]
+}
