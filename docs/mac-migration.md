@@ -21,7 +21,7 @@ Git 克隆不会带走原账号、设备、告警、历史索引和录像。如�
 
 - SQLite 在线备份取得一致的 platform.db；服务运行时不能只复制主库而漏掉 WAL。可在 Windows 执行 `node scripts/database.mjs backup data/platform.db`，等待完成，使用命令输出的备份文件。
 - 同时保管相应目录的 access-config.json、ai-config.json 和 ai-master.key。加密的 AI 配置依赖原密钥。这些文件含现场信息，不上传 Git。
-- 原录像约14.3GiB，位于 data/media；模型与 Windows 工具约2.2GiB。它们留在 Windows 本机，本轮尚未生成完整数据迁移包。
+- 原录像约14.3GiB，位于 data/media，不在数据库/模型包内。数据库、模型及8图复测材料现有独立本地包，操作见下方“数据库、模型及复测材料恢复”；Windows工具不打包到Mac。
 - 若将原库放到 data/development/platform.db，配套配置应放到同目录。先在副本上处理真实接入配置、自动录像计划和后台任务，防止开发环境自动连接现场。
 - 修正配置及库中 Windows 绝对路径后才能访问旧录像。将视频文件搬到 Mac 并不会自动修正所有历史条目的路径。
 
@@ -60,3 +60,66 @@ Windows 后台告警 AI 与索引仍暂停（qwenAlarmEnabled=false、indexEnabl
 3. 完成 Qwen 的 Mac 运行器及资源保护适配，另传原8张图并核对哈希。
 4. 修正无依据目标、动作及位置描述，完整重复真实推理并人工核对；未通过不得正式启用。
 5. 单独安排媒体和真实设备迁移验收，不凭首页可访问就报告 SIP/录像可用。
+
+## 数据库、模型及复测材料恢复（补充）
+
+Windows 输出目录为 `transfer/mac-20261109/`。请通过移动硬盘、局域网文件传输等方式将下列文件放到 Mac 的同一目录，例如 `~/Downloads/ls-aegis-transfer/`。包里有账号哈希、现场配置、AI主密钥及真实照片，仅供本人迁移，不上传Git或公开分享。
+
+| 文件 | 内容与解压目的地 |
+| --- | --- |
+| database-private.tar.gz | SQLite一致性快照、原 access-config.json、ai-config.json、ai-master.key、导出信息；解到单独备份目录，不直接覆盖正在运行的数据库。 |
+| models.tar | Qwen3-VL Q4_K_M、Q8视觉投影、Chinese-CLIP量化ONNX及分词/预处理配置；在仓库根解压，得到 data/ai-models/。不含Windows exe/dll。 |
+| retest-private.tar.gz | 原8图及历次候选诊断、旧测试脚本；在仓库根解压，得到 docs/evidence/... 和 .tmp/qwen-repair-20261109/。 |
+| models-manifest.json | 12个模型文件的大小与SHA256。 |
+| SHA256SUMS | 上述数据包和模型清单的SHA256。 |
+
+先更新代码到包含本补充的最新提交，并安装Node24及依赖。以下命令均在仓库根执行，目标目录不存在时使用：
+
+```sh
+git pull --ff-only
+npm ci
+# 可先在传输目录校验整个包
+(cd "$HOME/Downloads/ls-aegis-transfer" && shasum -a 256 -c SHA256SUMS)
+mkdir -p transfer/mac-original
+tar -xzf "$HOME/Downloads/ls-aegis-transfer/database-private.tar.gz" -C transfer/mac-original
+tar -xf "$HOME/Downloads/ls-aegis-transfer/models.tar"
+tar -xzf "$HOME/Downloads/ls-aegis-transfer/retest-private.tar.gz"
+node scripts/database.mjs check transfer/mac-original/snapshot/platform.db
+node scripts/prepare-mac-development.mjs transfer/mac-original/snapshot data/mac-development
+cp .env.development.example .env.development
+```
+
+编辑 `.env.development`：将 `PLATFORM_DATABASE` 改为 `data/mac-development/platform.db`，保留 `SIP_ENABLED=0`、空媒体URL和密钥。脚本生成的持久接入配置也关闭SIP、清空媒体连接；因为持久配置会覆盖环境配置，所以不能仅改.env。不要把原 access-config.json 再覆盖到开发副本。
+
+开发副本保留账号、设备档案、告警图片、分析结果、录像目录及索引记录。脚本仅在新目标目录操作：禁用录像计划和级联注册、关闭遗留会话/观看租约、取消未完成录像和AI任务、删除浏览器登录会话、暂停云端分析/自动告警AI/索引。原始快照保留不变，原账号密码仍可登录，但Mac需重新登录。脚本拒绝覆盖已存在目录；如已建立 data/development，使用这里的新目录即可，无需删除旧数据。
+
+```sh
+node scripts/database.mjs check data/mac-development/platform.db
+npm run build
+npm run start:development
+# 另开终端
+curl -f http://127.0.0.1:3005/api/health
+```
+
+先确认页面和健康，再验证历史告警图与分析记录。数据库有录像“条目”，没有录像文件本体；旧记录过期清理仍可能按应用规则执行，应保留原始快照。重放历史视频、录像帧提取或检索精查，需要另传 data/media，并调整历史路径/本地根路径和Mac FFmpeg；本包仅支持已有图片的复测，不代表完整录像迁移。
+
+模型默认目录正是 `data/ai-models/chinese-clip-vit-base-patch16/` 和 `data/ai-models/qwen3-vl-2b-q4/`，不要多嵌套一层目录，也不要把两份GGUF拆开。配置内不要沿用Windows绝对模型路径。可核对模型文件：
+
+```sh
+node --input-type=module -e 'import {localModelReady} from "./backend/ai/local-model.mjs"; console.log({chineseClipFilesReady:localModelReady()})'
+```
+
+该命令仅检查文件/版本就绪，不证明Mac实际推理通过。Qwen的Mac运行器仍待适配，权重放好后也不能直接启用原Windows运行器。`scripts/setup-qwen-vl-local.mjs`包含Windows运行库下载，不要当作Mac安装命令运行。
+
+### 接着做8张原图复测
+
+材料中 `.tmp/qwen-repair-20261109/before.json` 的 samples 是原8图相对路径和SHA256；final-eight.json 是失败候选的原始输出。先核对图，再改Mac运行器与复测脚本，不要复用before.json里Windows健康实例作为新实例。
+
+旧 `.tmp/.../verify.mjs` 固定 `data/platform.db`、localhost:3000和Windows实例信息，因此不能原样用于Mac验收。完成Mac运行器后，可先使用已有单图入口：
+
+```sh
+mkdir -p .tmp/mac-retest
+node scripts/verify-qwen-caption.mjs --image docs/evidence/qwen-multiscene-20261108/car-day.jpg --database data/mac-development/platform.db --report .tmp/mac-retest/car-day.json --repeat 1
+```
+
+该入口默认使用发布profile，而非candidate；要验证新候选，应在接手修改中显式选定并记录同一最终profile，完整运行8张。入口的passed仅表示脚本条件满足，最终仍逐图人工核对人物/车辆、额外目标、颜色位置、动作和时间戳；不能把JSON合法或不报错当成视觉内容正确。全部通过前保持自动AI关闭。
